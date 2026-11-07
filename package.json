@@ -1,0 +1,19 @@
+{
+  "name": "mdl-plugin-market",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MDL 插件市场：统一资产目录、确定性导出、客户端安装器与 DSH 索引投影",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server/server.mjs",
+    "export": "node export/export.mjs",
+    "validate": "node scripts/validate.mjs",
+    "build:dsh": "node scripts/build.mjs",
+    "check": "node scripts/validate.mjs && node export/export.mjs --check && node scripts/build.mjs --check",
+    "verify": "node scripts/verify.mjs"
+  }
+}
