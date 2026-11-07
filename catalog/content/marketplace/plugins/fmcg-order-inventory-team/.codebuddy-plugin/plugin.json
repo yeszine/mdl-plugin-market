@@ -1,0 +1,83 @@
+{
+  "name": "fmcg-order-inventory-team",
+  "version": "1.0.0",
+  "description": "FMCG order and inventory team: demand range forecasting, inventory health checks, replenishment execution, and capital/policy risk review",
+  "author": { "name": "DSH FMCG Index" },
+  "agents": [
+    "./agents/order-inventory-lead.md",
+    "./agents/demand-forecaster.md",
+    "./agents/inventory-health.md",
+    "./agents/replenishment-executor.md",
+    "./agents/risk-reviewer.md"
+  ],
+  "skills": ["./skills/order-inventory-sop"],
+  "expertType": "team",
+  "agentName": "order-inventory-lead",
+  "teamInfo": {
+    "leadAgent": "order-inventory-lead",
+    "memberAgents": ["demand-forecaster", "inventory-health", "replenishment-executor", "risk-reviewer"]
+  },
+  "displayName": { "en": "Order & Inventory Team", "zh": "订货库存协同专家团" },
+  "profession": { "en": "Order & Inventory Team", "zh": "订货库存协同专家团" },
+  "displayDescription": {
+    "en": "Balances stockout and overstock through joint review: demand ranges, inventory health, executable order and transfer lists, plus cash and policy risk checks",
+    "zh": "通过联合评审平衡缺货与压货：需求区间、库存体检、可执行订货与调拨清单，以及资金与政策风险复核"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "07-SalesCommerce",
+  "categoryName": "订货协同",
+  "defaultInitPrompt": {
+    "zh": "下期订货会要定货了，帮我协同看一下需求、库存和资金，给出一份既不断货也不压货的订货方案。",
+    "en": "The next order fair is coming; combine demand, inventory and cash into a plan that avoids both stockout and overstock."
+  },
+  "tags": [
+    { "en": "Order Planning", "zh": "订货规划" },
+    { "en": "Inventory Health", "zh": "库存健康" },
+    { "en": "S&OP", "zh": "产销协同" }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "下期订货会要定货了，帮我协同看一下需求、库存和资金，给出一份既不断货也不压货的订货方案。",
+      "en": "Build a balanced order plan across demand, inventory and cash."
+    },
+    { "zh": "帮我判断哪些 SKU 要补、哪些要停，给出调拨方案", "en": "Decide which SKUs to replenish or stop, with transfer options" },
+    { "zh": "这次厂商政策力度很大，帮我评估接不接", "en": "Assess whether to take this aggressive manufacturer policy" }
+  ],
+  "members": [
+    {
+      "id": "order-inventory-lead",
+      "name": { "en": "Zhou Xu", "zh": "周叙" },
+      "profession": { "en": "S&OP Lead", "zh": "订货库存协调人" },
+      "avatar": "avatars/order-inventory-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "demand-forecaster",
+      "name": { "en": "Xu Qing", "zh": "许青" },
+      "profession": { "en": "Demand Forecaster", "zh": "需求预测员" },
+      "avatar": "avatars/demand-forecaster.png",
+      "role": "member"
+    },
+    {
+      "id": "inventory-health",
+      "name": { "en": "Tang Ke", "zh": "唐可" },
+      "profession": { "en": "Inventory Health Analyst", "zh": "库存健康分析师" },
+      "avatar": "avatars/inventory-health.png",
+      "role": "member"
+    },
+    {
+      "id": "replenishment-executor",
+      "name": { "en": "Gu Nan", "zh": "顾南" },
+      "profession": { "en": "Replenishment Planner", "zh": "补货执行员" },
+      "avatar": "avatars/replenishment-executor.png",
+      "role": "member"
+    },
+    {
+      "id": "risk-reviewer",
+      "name": { "en": "Qin Yue", "zh": "秦越" },
+      "profession": { "en": "Risk Reviewer", "zh": "风险复核员" },
+      "avatar": "avatars/risk-reviewer.png",
+      "role": "member"
+    }
+  ]
+}

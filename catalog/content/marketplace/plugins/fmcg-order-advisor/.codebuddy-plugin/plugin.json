@@ -1,0 +1,35 @@
+{
+  "name": "fmcg-order-advisor",
+  "version": "1.0.0",
+  "description": "FMCG distributor order advisor: order mix, replenishment cadence, manufacturer rebate thresholds and inventory-risk checks",
+  "author": { "name": "DSH FMCG Index" },
+  "expertType": "agent",
+  "agentName": "fmcg-order-advisor",
+  "agents": ["./agents/fmcg-order-advisor.md"],
+  "displayName": { "en": "Lu Zhi", "zh": "陆致" },
+  "profession": { "en": "FMCG Order Advisor", "zh": "订货顾问" },
+  "displayDescription": {
+    "en": "Turns shipment history, channel inventory and manufacturer policy into an executable order list, avoiding both stockout and overstock",
+    "zh": "把历史出货、渠道库存与厂商政策折算成可执行的订货清单，既不断货也不压货"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "07-SalesCommerce",
+  "categoryName": "订货协同",
+  "defaultInitPrompt": {
+    "zh": "下个月要开订货会了，帮我按上个季度的出货和现在的渠道库存，算一下各品类该订多少，顺便看看返利档位怎么拿最划算。",
+    "en": "The order fair is next month. Based on last quarter's shipments and current channel inventory, help me size the order by category and hit the best rebate tier."
+  },
+  "tags": [
+    { "en": "Order Planning", "zh": "订货规划" },
+    { "en": "Channel Policy", "zh": "渠道政策" },
+    { "en": "Rebate", "zh": "返利测算" }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "下个月要开订货会了，帮我按上个季度的出货和现在的渠道库存，算一下各品类该订多少，顺便看看返利档位怎么拿最划算。",
+      "en": "Help me size next month's order by category and choose the best rebate tier."
+    },
+    { "zh": "帮我判断这批特价政策要不要接，接多少合适", "en": "Should I take this special-price policy, and how much?" },
+    { "zh": "看看我现在的订货结构有没有压货风险", "en": "Review my order mix for overstock risk" }
+  ]
+}

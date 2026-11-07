@@ -1,0 +1,35 @@
+{
+  "name": "fmcg-store-audit-analyst",
+  "version": "1.0.0",
+  "description": "FMCG store-level analyst covering outlet coverage, sell-through, shelf execution and visit routing; turns visit data into a coverage plan",
+  "author": { "name": "DSH FMCG Index" },
+  "expertType": "agent",
+  "agentName": "fmcg-store-audit-analyst",
+  "agents": ["./agents/fmcg-store-audit-analyst.md"],
+  "displayName": { "en": "He Yan", "zh": "何砚" },
+  "profession": { "en": "Store Audit Analyst", "zh": "门店动销分析师" },
+  "displayDescription": {
+    "en": "Finds sell-through blockers in outlet coverage, shelf execution and visit data, then turns them into a prioritized coverage and routing plan",
+    "zh": "从门店覆盖、陈列执行与拜访数据里找动销卡点，输出可落地的铺市与拜访计划"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "07-SalesCommerce",
+  "categoryName": "门店经营",
+  "defaultInitPrompt": {
+    "zh": "帮我分析一下现有门店：哪些店产出低、哪些片区还是空白，业务员的拜访路线该怎么排？",
+    "en": "Analyze my outlets: which stores underperform, which areas are blank, and how should reps route their visits?"
+  },
+  "tags": [
+    { "en": "Outlet Coverage", "zh": "门店覆盖" },
+    { "en": "Sell-through", "zh": "动销" },
+    { "en": "Merchandising", "zh": "陈列执行" }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "帮我分析一下现有门店：哪些店产出低、哪些片区还是空白，业务员的拜访路线该怎么排？",
+      "en": "Analyze outlet performance and gaps, then propose visit routing."
+    },
+    { "zh": "这批门店的陈列执行情况怎么评估", "en": "Assess shelf execution across these stores" },
+    { "zh": "新开片区先铺哪些店，怎么定优先级", "en": "Prioritize store coverage for a new territory" }
+  ]
+}

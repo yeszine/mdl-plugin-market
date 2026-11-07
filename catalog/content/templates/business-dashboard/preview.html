@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>经销商经营看板 · 模板案例</title>
+<style>
+  :root { color-scheme: dark; --bg:#0f172a; --panel:#111c33; --line:#22314f; --text:#e2e8f0; --muted:#7d8ba5; --blue:#3b82f6; --green:#22c55e; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.6 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif; background:var(--bg); color:var(--text); }
+  main { max-width: 1040px; margin: 0 auto; padding: 40px 24px 64px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  .muted { color: var(--muted); }
+  .badge { display:inline-block; margin-top:10px; padding:4px 10px; border:1px solid var(--line); border-radius:999px; color:var(--muted); font-size:12px; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:28px 0; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px; }
+  .card .label { color:var(--muted); font-size:12px; }
+  .card .value { font-size:26px; font-weight:700; margin-top:6px; }
+  .card .delta { font-size:12px; margin-top:4px; }
+  .up { color:#4ade80; } .down { color:#f87171; } .warn { color:#fbbf24; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .bars { display:flex; align-items:flex-end; gap:12px; height:180px; margin-top:18px; }
+  .bar { flex:1; background:var(--blue); border-radius:6px 6px 0 0; position:relative; }
+  .bar span { position:absolute; bottom:-24px; left:0; right:0; text-align:center; color:var(--muted); font-size:11px; }
+  ul { margin:14px 0 0; padding-left:18px; }
+  li { margin:8px 0; }
+  footer { margin-top:30px; color:var(--muted); font-size:12px; border-top:1px solid var(--line); padding-top:14px; }
+  @media (max-width: 860px) { .kpis { grid-template-columns:repeat(2,1fr); } .grid { grid-template-columns:1fr; } }
+  @media print { body { background:#fff; color:#111; } .card { background:#fff; border-color:#ddd; } footer { color:#666; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>经销商经营看板 · 2026 Q3</h1>
+  <div class="muted">模板案例 · 内置数据仅用于展示结构，不来自任何真实企业</div>
+  <span class="badge">做同款：安装依赖技能后粘贴提示词</span>
+
+  <section class="kpis">
+    <div class="card"><div class="label">出货额</div><div class="value">2,846 万</div><div class="delta up">同比 +8.2%</div></div>
+    <div class="card"><div class="label">回款率</div><div class="value">92.4%</div><div class="delta warn">低于目标 2.6pp</div></div>
+    <div class="card"><div class="label">毛利率</div><div class="value">18.6%</div><div class="delta up">同比 +0.9pp</div></div>
+    <div class="card"><div class="label">库存周转</div><div class="value">38 天</div><div class="delta down">高于目标 5 天</div></div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <div class="label">区域出货对比（万元）</div>
+      <div class="bars">
+        <div class="bar" style="height:42%"><span>华东</span></div>
+        <div class="bar" style="height:72%"><span>华南</span></div>
+        <div class="bar" style="height:56%"><span>华北</span></div>
+        <div class="bar" style="height:92%"><span>西南</span></div>
+        <div class="bar" style="height:64%"><span>华中</span></div>
+        <div class="bar" style="height:34%"><span>西北</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="label">问题与行动</div>
+      <ul>
+        <li><strong>回款率低于目标：</strong>华东 3 家客户逾期超 30 天，由区域经理本周内出对账计划。</li>
+        <li><strong>库存周转偏慢：</strong>日化品类库龄 60 天以上金额占比 21%，由库存管控师出清库方案。</li>
+        <li><strong>区域结构不均：</strong>西北出货同比下滑 6%，下周复盘渠道覆盖缺口。</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    口径：金额为不含税出货额；退货按冲减处理；回款率 = 当期回款 / 当期应收；库存周转 = 平均库存 / 日均出货。<br>
+    这是模板案例，不代表任何真实经营数据。
+  </footer>
+</main>
+</body>
+</html>

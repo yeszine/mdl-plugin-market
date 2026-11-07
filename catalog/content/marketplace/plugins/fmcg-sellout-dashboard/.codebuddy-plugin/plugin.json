@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "fmcg-sellout-dashboard",
+  "version": "1.0.0",
+  "description": "Store-level sell-out and distribution dashboard connector: coverage, active stores, on-shelf availability, display execution and visit frequency.",
+  "keywords": ["mcp", "skills"],
+  "extensions": {
+    "ai.workbuddy": {
+      "schemaVersion": "1.0.0",
+      "display": {
+        "name": "门店动销看板",
+        "name_en": "Store Sell-out Dashboard",
+        "description_zh": "接入门店动销看板，查询门店覆盖、活跃门店、有货率、陈列执行与拜访频次，按区域、渠道、门店类型拆解动销表现。",
+        "description_en": "Connect to the store sell-out dashboard for coverage, active stores, on-shelf availability, display execution and visit frequency, sliced by region, channel and store type.",
+        "examples_zh": [
+          "看看本月各区域的门店覆盖率和活跃门店数",
+          "哪些门店有货率跌破 90%",
+          "列出陈列执行不合格的门店",
+          "对比现代渠道和传统渠道的单店产出"
+        ],
+        "examples_en": [
+          "Show store coverage and active store counts by region this month",
+          "Which stores dropped below 90% on-shelf availability",
+          "List stores failing display execution",
+          "Compare sales per store between modern and traditional trade"
+        ]
+      },
+      "policy": {
+        "visible_in": ["internal", "iOA", "cloudhosted", "selfhosted"],
+        "mcpServers": {
+          "fmcg-sellout-dashboard": {
+            "timeout": 25000
+          }
+        }
+      }
+    }
+  }
+}

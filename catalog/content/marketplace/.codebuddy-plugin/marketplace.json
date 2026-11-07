@@ -1,0 +1,41 @@
+{
+  "name": "workbuddy-fmcg",
+  "description": "快消经销商 WorkBuddy 市场：订货、库存、门店动销与经营复盘",
+  "plugins": [
+    {
+      "name": "fmcg-order-advisor",
+      "source": "./plugins/fmcg-order-advisor",
+      "description": "订货顾问：订货结构、补货节奏、返利档位与压货风险检查"
+    },
+    {
+      "name": "fmcg-inventory-controller",
+      "source": "./plugins/fmcg-inventory-controller",
+      "description": "库存管控师：周转天数、库龄与临期处置、安全库存与调拨清库"
+    },
+    {
+      "name": "fmcg-store-audit-analyst",
+      "source": "./plugins/fmcg-store-audit-analyst",
+      "description": "门店动销分析师：门店覆盖、单店产出、陈列执行与拜访路线"
+    },
+    {
+      "name": "fmcg-business-review-team",
+      "source": "./plugins/fmcg-business-review-team",
+      "description": "经销商经营复盘专家团：口径对齐、毛利归因、结构分析与上会报告"
+    },
+    {
+      "name": "fmcg-order-inventory-team",
+      "source": "./plugins/fmcg-order-inventory-team",
+      "description": "订货库存协同专家团：需求区间、库存体检、补货执行与风险复核"
+    },
+    {
+      "name": "fmcg-erp-readonly",
+      "source": "./plugins/fmcg-erp-readonly",
+      "description": "S6 ERP 只读查询连接器：客户、订单、出货、库存与应收，只读不写"
+    },
+    {
+      "name": "fmcg-sellout-dashboard",
+      "source": "./plugins/fmcg-sellout-dashboard",
+      "description": "门店动销看板连接器：覆盖、有货率、陈列执行与拜访频次"
+    }
+  ]
+}

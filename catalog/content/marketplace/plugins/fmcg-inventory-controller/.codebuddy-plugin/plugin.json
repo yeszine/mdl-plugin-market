@@ -1,0 +1,35 @@
+{
+  "name": "fmcg-inventory-controller",
+  "version": "1.0.0",
+  "description": "FMCG distributor inventory health expert: turnover days, aging and near-expiry risk, safety stock, transfer and clearance plans",
+  "author": { "name": "DSH FMCG Index" },
+  "expertType": "agent",
+  "agentName": "fmcg-inventory-controller",
+  "agents": ["./agents/fmcg-inventory-controller.md"],
+  "displayName": { "en": "Shen Du", "zh": "沈度" },
+  "profession": { "en": "Inventory Controller", "zh": "库存管控师" },
+  "displayDescription": {
+    "en": "Diagnoses warehouse health by turnover and aging, then sets safety stock, transfer and clearance actions to free up tied-up cash",
+    "zh": "用周转与库龄给仓库做体检，再用安全库存、调拨与清库动作把占用的资金盘活"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "07-SalesCommerce",
+  "categoryName": "库存管理",
+  "defaultInitPrompt": {
+    "zh": "帮我看看现在的库存健康度：哪些品类周转太慢、哪些批次快临期了，我该先处理什么？",
+    "en": "Review my inventory health: which categories turn too slowly, which batches are near expiry, and what should I handle first?"
+  },
+  "tags": [
+    { "en": "Inventory", "zh": "库存" },
+    { "en": "Turnover", "zh": "周转" },
+    { "en": "Near-expiry", "zh": "临期管理" }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "帮我看看现在的库存健康度：哪些品类周转太慢、哪些批次快临期了，我该先处理什么？",
+      "en": "Diagnose my inventory health and prioritize actions."
+    },
+    { "zh": "帮我定一下重点 SKU 的安全库存和补货点", "en": "Set safety stock and reorder points for key SKUs" },
+    { "zh": "临期库存怎么清，才不会把价格打乱", "en": "How to clear near-expiry stock without breaking price" }
+  ]
+}

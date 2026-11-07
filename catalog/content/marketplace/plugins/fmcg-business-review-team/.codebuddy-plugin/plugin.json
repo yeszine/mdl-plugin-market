@@ -1,0 +1,83 @@
+{
+  "name": "fmcg-business-review-team",
+  "version": "1.0.0",
+  "description": "FMCG distributor business review team covering data alignment, gross-margin and expense attribution, category and channel structure, and management-ready review reporting",
+  "author": { "name": "DSH FMCG Index" },
+  "agents": [
+    "./agents/review-lead.md",
+    "./agents/data-steward.md",
+    "./agents/finance-analyst.md",
+    "./agents/category-analyst.md",
+    "./agents/report-writer.md"
+  ],
+  "skills": ["./skills/business-review-playbook"],
+  "expertType": "team",
+  "agentName": "review-lead",
+  "teamInfo": {
+    "leadAgent": "review-lead",
+    "memberAgents": ["data-steward", "finance-analyst", "category-analyst", "report-writer"]
+  },
+  "displayName": { "en": "Distributor Review Team", "zh": "经销商经营复盘专家团" },
+  "profession": { "en": "Distributor Review Team", "zh": "经销商经营复盘专家团" },
+  "displayDescription": {
+    "en": "Four roles work under one lead: align data definitions, attribute margin and expense, break down category and channel structure, then compile a review deck with conclusions and owners",
+    "zh": "四岗协同：先对齐数据口径，再做毛利与费用归因、品类渠道结构拆解，最后汇编成带结论与责任人的复盘报告"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "04-DataAI",
+  "categoryName": "经营复盘",
+  "defaultInitPrompt": {
+    "zh": "帮我把上个月的经营情况复盘一下：出货、回款、毛利、费用和库存都要看，最后给我一份能上经营例会的材料。",
+    "en": "Review last month's business across shipments, collections, margin, expenses and inventory, and produce management-ready material."
+  },
+  "tags": [
+    { "en": "Business Review", "zh": "经营复盘" },
+    { "en": "Margin Attribution", "zh": "毛利归因" },
+    { "en": "Management Reporting", "zh": "经营汇报" }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "帮我把上个月的经营情况复盘一下：出货、回款、毛利、费用和库存都要看，最后给我一份能上经营例会的材料。",
+      "en": "Run a full monthly business review and produce meeting-ready material."
+    },
+    { "zh": "这个月毛利掉了，帮我拆一下是价格、结构还是费用的问题", "en": "Gross margin dropped this month; break down price, mix and expense effects" },
+    { "zh": "按区域和渠道做一版目标完成度分析", "en": "Analyze target attainment by region and channel" }
+  ],
+  "members": [
+    {
+      "id": "review-lead",
+      "name": { "en": "Jiang Xu", "zh": "江叙" },
+      "profession": { "en": "Review Lead", "zh": "经营复盘主理人" },
+      "avatar": "avatars/review-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "data-steward",
+      "name": { "en": "Chen Mo", "zh": "陈默" },
+      "profession": { "en": "Data Steward", "zh": "数据整理员" },
+      "avatar": "avatars/data-steward.png",
+      "role": "member"
+    },
+    {
+      "id": "finance-analyst",
+      "name": { "en": "Lin Ruo", "zh": "林若" },
+      "profession": { "en": "Finance Analyst", "zh": "财务核算员" },
+      "avatar": "avatars/finance-analyst.png",
+      "role": "member"
+    },
+    {
+      "id": "category-analyst",
+      "name": { "en": "Zhou Xing", "zh": "周行" },
+      "profession": { "en": "Category Analyst", "zh": "品类分析师" },
+      "avatar": "avatars/category-analyst.png",
+      "role": "member"
+    },
+    {
+      "id": "report-writer",
+      "name": { "en": "Su Wan", "zh": "苏晚" },
+      "profession": { "en": "Report Writer", "zh": "复盘报告撰写" },
+      "avatar": "avatars/report-writer.png",
+      "role": "member"
+    }
+  ]
+}

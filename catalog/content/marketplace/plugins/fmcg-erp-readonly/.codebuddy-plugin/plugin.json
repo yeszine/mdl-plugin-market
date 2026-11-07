@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "fmcg-erp-readonly",
+  "version": "1.0.0",
+  "description": "Read-only query of the distributor S6 ERP: customers, SKUs, sales orders, shipments, inventory and receivables, without any write operation.",
+  "keywords": ["mcp", "skills"],
+  "extensions": {
+    "ai.workbuddy": {
+      "schemaVersion": "1.0.0",
+      "display": {
+        "name": "S6 ERP 只读查询",
+        "name_en": "S6 ERP Read-only",
+        "description_zh": "只读接入经销商的 S6 ERP，查询客户、商品、订单、出货、库存与应收数据；所有工具均为只读，不会修改任何单据。",
+        "description_en": "Read-only access to the distributor's S6 ERP for customers, SKUs, orders, shipments, inventory and receivables. Every tool is read-only and never writes documents.",
+        "examples_zh": [
+          "查一下华东区上周的出货明细",
+          "这个月哪些客户的应收超过了账期",
+          "列出库存低于安全库存的 SKU",
+          "把某客户近 12 个月的订单拉出来"
+        ],
+        "examples_en": [
+          "Show last week's shipment lines for the East region",
+          "Which customers are past their receivable terms this month",
+          "List SKUs below safety stock",
+          "Pull the last 12 months of orders for a customer"
+        ]
+      },
+      "policy": {
+        "visible_in": ["internal", "iOA", "cloudhosted", "selfhosted"],
+        "mcpServers": {
+          "fmcg-erp-readonly": {
+            "timeout": 20000
+          }
+        }
+      }
+    }
+  }
+}
