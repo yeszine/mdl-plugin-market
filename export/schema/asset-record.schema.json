@@ -1,0 +1,390 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mdl.example/schemas/asset-record/3.0",
+  "title": "MDL asset record 3.0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "kind",
+    "asset_id",
+    "slug",
+    "version",
+    "name",
+    "summary",
+    "description",
+    "category",
+    "tags",
+    "highlights",
+    "examples",
+    "owner",
+    "publisher",
+    "visibility",
+    "license",
+    "pricing",
+    "scan",
+    "review",
+    "capabilities",
+    "scopes",
+    "permissions",
+    "secrets_policy",
+    "compatibility",
+    "metrics",
+    "updated_at",
+    "files",
+    "digest",
+    "source"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "asset-record/3.0" },
+    "kind": { "const": "asset" },
+    "asset_id": { "type": "string", "pattern": "^mdl\\.[a-z0-9-]+\\.[a-z0-9][a-z0-9.-]*$" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+(?:[-+][0-9A-Za-z.-]+)?$" },
+    "name": { "$ref": "#/$defs/i18n" },
+    "summary": { "$ref": "#/$defs/i18n" },
+    "description": { "$ref": "#/$defs/i18n" },
+    "category": {
+      "type": "object",
+      "required": ["primary", "labels"],
+      "additionalProperties": false,
+      "properties": {
+        "primary": { "type": "string", "pattern": "^[a-z-]+/[a-z0-9-]+$" },
+        "labels": { "type": "array", "items": { "type": "string" }, "maxItems": 8 }
+      }
+    },
+    "tags": { "type": "array", "items": { "type": "string" }, "maxItems": 12 },
+    "highlights": { "type": "array", "items": { "type": "string" }, "maxItems": 8 },
+    "examples": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["label", "prompt"],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "prompt": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "use_cases": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["title", "summary"],
+        "additionalProperties": false,
+        "properties": {
+          "title": { "type": "string" },
+          "summary": { "type": "string" }
+        }
+      }
+    },
+    "owner": {
+      "type": "object",
+      "required": ["org_id", "user_id"],
+      "additionalProperties": false,
+      "properties": {
+        "org_id": { "type": "string" },
+        "user_id": { "type": ["string", "null"] }
+      }
+    },
+    "publisher": {
+      "type": "object",
+      "required": ["name", "verification"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "verification": { "enum": ["official", "verified", "community"] }
+      }
+    },
+    "visibility": { "enum": ["private", "org", "public"] },
+    "license": { "type": "string" },
+    "pricing": {
+      "type": "object",
+      "required": ["model", "price"],
+      "additionalProperties": false,
+      "properties": {
+        "model": { "enum": ["free", "paid"] },
+        "price": { "type": ["number", "null"] }
+      }
+    },
+    "scan": {
+      "type": "object",
+      "required": ["state", "checked_at", "issues"],
+      "additionalProperties": false,
+      "properties": {
+        "state": { "enum": ["pending", "passed", "failed"] },
+        "checked_at": { "type": "string" },
+        "issues": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": ["state", "reviewer", "reviewed_at", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "state": { "enum": ["draft", "pending", "approved", "rejected"] },
+        "reviewer": { "type": ["string", "null"] },
+        "reviewed_at": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "required": ["install", "toggle", "exhibit", "runtime"],
+      "additionalProperties": false,
+      "properties": {
+        "install": {
+          "type": "object",
+          "required": ["modes", "hosts", "entry", "target", "source", "dependencies"],
+          "additionalProperties": false,
+          "properties": {
+            "modes": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": { "enum": ["direct", "prompt", "toggle"] }
+            },
+            "hosts": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+            "entry": { "type": ["string", "null"] },
+            "target": { "type": ["string", "null"] },
+            "source": { "type": ["string", "null"] },
+            "dependencies": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["asset_id", "version", "optional"],
+                "additionalProperties": false,
+                "properties": {
+                  "asset_id": { "type": "string" },
+                  "version": { "type": "string" },
+                  "optional": { "type": "boolean" }
+                }
+              }
+            }
+          }
+        },
+        "toggle": {
+          "type": "object",
+          "required": ["supported", "key", "default", "scope"],
+          "additionalProperties": false,
+          "properties": {
+            "supported": { "type": "boolean" },
+            "key": { "type": ["string", "null"] },
+            "default": { "type": "boolean" },
+            "scope": { "enum": ["user", "org", "platform"] }
+          }
+        },
+        "exhibit": {
+          "type": "object",
+          "required": ["showcase", "same_as"],
+          "additionalProperties": false,
+          "properties": {
+            "showcase": { "type": "boolean" },
+            "same_as": { "type": "boolean" }
+          }
+        },
+        "runtime": {
+          "type": "object",
+          "required": ["client_side", "server_side"],
+          "additionalProperties": false,
+          "properties": {
+            "client_side": { "type": "boolean" },
+            "server_side": { "type": "boolean" }
+          }
+        }
+      }
+    },
+    "scopes": { "type": "array", "items": { "type": "string" } },
+    "permissions": {
+      "type": "object",
+      "required": ["filesystem", "network", "shell", "credentials", "data_scope"],
+      "additionalProperties": false,
+      "properties": {
+        "filesystem": { "enum": ["none", "read", "write"] },
+        "network": { "type": "boolean" },
+        "shell": { "type": "boolean" },
+        "credentials": { "type": "boolean" },
+        "data_scope": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "secrets_policy": {
+      "type": "object",
+      "required": ["allow_hardcoded", "source"],
+      "additionalProperties": false,
+      "properties": {
+        "allow_hardcoded": { "type": "boolean" },
+        "source": { "enum": ["none", "host", "org", "user"] }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "required": ["mdl_core", "hosts", "min_version", "runtime"],
+      "additionalProperties": false,
+      "properties": {
+        "mdl_core": { "type": "string" },
+        "hosts": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "min_version": { "type": "string" },
+        "runtime": { "type": "string" }
+      }
+    },
+    "skill": {
+      "type": "object",
+      "required": ["format", "name", "entry"],
+      "additionalProperties": false,
+      "properties": {
+        "format": { "type": "string" },
+        "name": { "type": "string" },
+        "entry": { "type": "string" }
+      }
+    },
+    "plugin": {
+      "type": "object",
+      "required": ["manifest_path", "entrypoints", "bundled_skills"],
+      "additionalProperties": false,
+      "properties": {
+        "manifest_path": { "type": "string" },
+        "entrypoints": { "type": "object" },
+        "bundled_skills": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "connector": {
+      "type": "object",
+      "required": ["type", "transport", "endpoint", "auth"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": ["mcp", "http"] },
+        "transport": { "type": "string" },
+        "endpoint": { "type": "string" },
+        "auth": { "enum": ["none", "host", "user"] }
+      }
+    },
+    "showcase": {
+      "type": "object",
+      "required": ["artifact_url", "thumbnail", "screenshots", "data_required"],
+      "additionalProperties": false,
+      "properties": {
+        "artifact_url": { "type": "string" },
+        "thumbnail": { "type": "string" },
+        "screenshots": { "type": "array", "items": { "type": "string" } },
+        "data_required": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "same_as": {
+      "type": "object",
+      "required": ["prompt", "inputs", "outputs", "dependent_assets", "steps"],
+      "additionalProperties": false,
+      "properties": {
+        "prompt": { "type": "string" },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "type", "required", "example"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "type": { "type": "string" },
+              "required": { "type": "boolean" },
+              "example": { "type": "string" }
+            }
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "type"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "type": { "type": "string" }
+            }
+          }
+        },
+        "dependent_assets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["asset_id", "version", "role", "optional"],
+            "additionalProperties": false,
+            "properties": {
+              "asset_id": { "type": "string" },
+              "version": { "type": "string" },
+              "role": { "type": "string" },
+              "optional": { "type": "boolean" }
+            }
+          }
+        },
+        "steps": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["produced_by_asset_id", "produced_by_version", "generated_at"],
+      "additionalProperties": false,
+      "properties": {
+        "produced_by_asset_id": { "type": "string" },
+        "produced_by_version": { "type": "string" },
+        "generated_at": { "type": "string" }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "required": ["downloads", "installs", "rating"],
+      "additionalProperties": false,
+      "properties": {
+        "downloads": { "type": "integer", "minimum": 0 },
+        "installs": { "type": "integer", "minimum": 0 },
+        "rating": { "type": ["number", "null"] }
+      }
+    },
+    "updated_at": { "type": "string" },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "size", "sha256"],
+        "additionalProperties": false,
+        "properties": {
+          "path": { "type": "string", "pattern": "^(catalog|data|bundles|docs|client|server|web|scripts|site|export)/" },
+          "size": { "type": "integer", "minimum": 0 },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        }
+      }
+    },
+    "digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "source": {
+      "type": "object",
+      "required": ["repo", "commit", "path", "exported_at"],
+      "additionalProperties": false,
+      "properties": {
+        "repo": { "type": "string" },
+        "commit": { "type": "string" },
+        "path": { "type": ["string", "null"] },
+        "exported_at": { "type": "string" }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "capabilities": { "properties": { "install": { "properties": { "modes": { "contains": { "const": "direct" } } } } } } }
+      },
+      "then": { "properties": { "files": { "minItems": 1 } } }
+    }
+  ],
+  "$defs": {
+    "i18n": {
+      "type": "object",
+      "required": ["zh", "en"],
+      "additionalProperties": false,
+      "properties": {
+        "zh": { "type": "string", "minLength": 1 },
+        "en": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

@@ -1,0 +1,2774 @@
+{
+  "schema_version": "asset-record-set/3.0",
+  "marketplace": {
+    "id": "mdl-plugin-market",
+    "name": {
+      "zh": "MDL 插件市场",
+      "en": "MDL Plugin Market"
+    },
+    "description": {
+      "zh": "面向快消经销商的统一资产市场：技能、专家、专家团、连接器、模板案例与平台扩展共用一份资产模型与一个列表入口。",
+      "en": "A unified asset market for FMCG distributors: skills, experts, teams, connectors, templates and platform extensions share one asset model and one list entry."
+    },
+    "version": "3.0.0",
+    "publisher": "MDL Plugin Market",
+    "updated_at": "2026-11-07T00:00:00Z"
+  },
+  "generated_at": "2026-11-07T00:00:00Z",
+  "commit": "unknown",
+  "counts": {
+    "total": 15,
+    "by_category": {
+      "skill": 6,
+      "expert": 3,
+      "team": 2,
+      "connector": 2,
+      "template": 1,
+      "platform-extension": 1
+    }
+  },
+  "assets": [
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.skill.business-ops-analysis",
+      "slug": "business-ops-analysis",
+      "version": "1.0.0",
+      "name": {
+        "zh": "经销商经营分析",
+        "en": "Distributor Business Ops Analysis"
+      },
+      "summary": {
+        "zh": "从出货、回款、费用、库存数据走完「看懂数据 → 定位问题 → 输出汇报」的完整链路。",
+        "en": "Turn shipment, receivable, expense and inventory data into a review-ready operating report."
+      },
+      "description": {
+        "zh": "围绕经销商月度/季度经营复盘设计：拆解区域、品类、品牌、渠道结构，核算销售任务完成度与缺口，识别同比环比异常，并产出可直接上经营例会的结论与行动建议。",
+        "en": "Designed for monthly and quarterly distributor reviews: break down region, category, brand and channel structure, measure target completion and gaps, detect anomalies, and produce conclusions and actions ready for the management meeting."
+      },
+      "category": {
+        "primary": "skill/analysis",
+        "labels": [
+          "经营复盘",
+          "数据分析"
+        ]
+      },
+      "tags": [
+        "经营分析",
+        "经营复盘",
+        "目标达成",
+        "毛利费用"
+      ],
+      "highlights": [
+        "按出货 / 回款 / 费用 / 净利四层核算",
+        "区域 · 品类 · 渠道结构拆解",
+        "异常波动分级与追赶节奏测算"
+      ],
+      "examples": [
+        {
+          "label": "月度经营复盘",
+          "prompt": "用经营分析技能，基于我上传的 9 月出货、回款、费用和库存表，做一份月度复盘：先给结论，再拆区域和品类，最后列出 3 个可执行的改善动作。"
+        },
+        {
+          "label": "目标缺口测算",
+          "prompt": "对比本月目标和实际出货，按区域和品类拆出缺口，测算剩余时间需要怎样的周均出货节奏才能追上。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "月度经营例会",
+          "summary": "把四张底表合成一页结论，会议上只讨论缺口与动作。"
+        },
+        {
+          "title": "季度目标追赶",
+          "summary": "按区域与品类拆缺口，输出周均追赶节奏。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": "SKILL.md",
+          "target": "skills/{name}",
+          "source": "catalog/content/skills/business-ops-analysis",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": false,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "read",
+        "network": false,
+        "shell": false,
+        "credentials": false,
+        "data_scope": [
+          "sales",
+          "receivables",
+          "expenses",
+          "inventory"
+        ]
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy",
+          "trae",
+          "dsh"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "skill": {
+        "format": "agentskills/v1",
+        "name": "business-ops-analysis",
+        "entry": "SKILL.md"
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/skills/business-ops-analysis/SKILL.md",
+          "size": 5892,
+          "sha256": "a089ed3e80eaee4ab497416a7c0233d2ee555354cc5e506eafecacf04581dbdc"
+        },
+        {
+          "path": "catalog/content/skills/business-ops-analysis/references/anomaly-identification.md",
+          "size": 3044,
+          "sha256": "37dd612ba684825760580f06f9d62c3523e29b48b84255b708dcefd2833fa24c"
+        },
+        {
+          "path": "catalog/content/skills/business-ops-analysis/references/report-synthesis.md",
+          "size": 4448,
+          "sha256": "2f734180ddb31ced6da19fed81a2e134d7ef0afc12ddcb470f1e851df95b166e"
+        },
+        {
+          "path": "catalog/content/skills/business-ops-analysis/references/structure-analysis.md",
+          "size": 3868,
+          "sha256": "02e5cb1e87816595618c75dea24d17ae3f30536ebad4841c75217b119033a9fc"
+        },
+        {
+          "path": "catalog/content/skills/business-ops-analysis/references/trend-analysis.md",
+          "size": 4424,
+          "sha256": "762227a08815ffd307d6e05ee1a2e3b280be661d2f5e8b9c444e8ef5a6fb7500"
+        }
+      ],
+      "digest": "7cbddde06de35f5c51dad2ab53c3908ab73de77ed3d8708f0a4f75a471750654",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/skills/business-ops-analysis",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.skill.dynamic-ui",
+      "slug": "dynamic-ui",
+      "version": "1.0.0",
+      "name": {
+        "zh": "可视化图解",
+        "en": "Inline Visuals"
+      },
+      "summary": {
+        "zh": "在对话里直接画流程图、对比图与结构示意图，讲清业务链路。",
+        "en": "Draw flowcharts, comparisons and structure diagrams inside the conversation to explain business processes."
+      },
+      "description": {
+        "zh": "适合解释补货流程、审批链路、库存周转模型、组织分工等结构性问题，把口头描述转成一眼能看懂的图。",
+        "en": "For explaining replenishment flows, approval chains, inventory turnover models and org design: turn verbal descriptions into diagrams that are understood at a glance."
+      },
+      "category": {
+        "primary": "skill/visual",
+        "labels": [
+          "可视化",
+          "流程"
+        ]
+      },
+      "tags": [
+        "可视化",
+        "流程",
+        "图表",
+        "沟通"
+      ],
+      "highlights": [
+        "流程与结构图",
+        "对比与决策图",
+        "对话内直接呈现"
+      ],
+      "examples": [
+        {
+          "label": "补货流程",
+          "prompt": "用可视化图解把我们的补货流程画出来：门店上报、区域汇总、仓配审核、发货、到店确认，标出每个环节的责任人。"
+        },
+        {
+          "label": "方案对比",
+          "prompt": "把「集中仓」和「区域分仓」两种方案的成本、时效、库存风险画成对比图，最后给推荐。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "流程梳理",
+          "summary": "把口头流程变成责任清晰的图。"
+        },
+        {
+          "title": "方案对比",
+          "summary": "用一张图对齐决策口径。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": "SKILL.md",
+          "target": "skills/{name}",
+          "source": "catalog/content/skills/dynamic-ui",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": false,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "none",
+        "network": false,
+        "shell": false,
+        "credentials": false,
+        "data_scope": []
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy",
+          "trae",
+          "dsh"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "skill": {
+        "format": "agentskills/v1",
+        "name": "dynamic-ui",
+        "entry": "SKILL.md"
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/skills/dynamic-ui/SKILL.md",
+          "size": 9040,
+          "sha256": "a280b7d5563cafe7e4e16bfaef9fb2f6c123c43935b64ca08519f5327dacf4fc"
+        }
+      ],
+      "digest": "2a2c52105ea2ad29141377116e0111f7ce2aa89c1b972d8e61851ada519b7972",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/skills/dynamic-ui",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.skill.html-report",
+      "slug": "html-report",
+      "version": "1.0.0",
+      "name": {
+        "zh": "HTML 报告",
+        "en": "HTML Report"
+      },
+      "summary": {
+        "zh": "把经营数据与结论做成可直接发群、可打印的单文件 HTML 报告。",
+        "en": "Turn operating data and conclusions into a single-file HTML report that can be shared or printed."
+      },
+      "description": {
+        "zh": "面向周报、月报、专项复盘：自带排版规范、图表位与来源标注，输出为单个 HTML 文件，无需部署即可在浏览器打开或转 PDF。",
+        "en": "For weekly, monthly and ad-hoc reviews: built-in layout rules, chart slots and source notes. Output is one HTML file that opens in a browser or converts to PDF without deployment."
+      },
+      "category": {
+        "primary": "skill/report",
+        "labels": [
+          "报告",
+          "可视化"
+        ]
+      },
+      "tags": [
+        "报告",
+        "月报",
+        "可视化",
+        "HTML"
+      ],
+      "highlights": [
+        "单文件交付，无外部依赖",
+        "报告结构与图表位规范",
+        "可直接打印为 PDF"
+      ],
+      "examples": [
+        {
+          "label": "月报成稿",
+          "prompt": "用 HTML 报告技能，把这份月报数据做成一页可打印的报告：结论区、指标区、区域对比图、问题与动作，来源写在页脚。"
+        },
+        {
+          "label": "专项复盘",
+          "prompt": "把这次促销活动的投入产出做成单文件 HTML，重点展示费用结构、增量测算和下次建议。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "经营月报",
+          "summary": "一页纸结论 + 图表 + 行动项。"
+        },
+        {
+          "title": "专项复盘",
+          "summary": "活动结束后 30 分钟内成稿。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": "SKILL.md",
+          "target": "skills/{name}",
+          "source": "catalog/content/skills/html-report",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": false,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "write",
+        "network": false,
+        "shell": false,
+        "credentials": false,
+        "data_scope": []
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy",
+          "trae",
+          "dsh"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "skill": {
+        "format": "agentskills/v1",
+        "name": "html-report",
+        "entry": "SKILL.md"
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/skills/html-report/SKILL.md",
+          "size": 6676,
+          "sha256": "d3b9e8637a80a8c45d58519d77bc5b4b164f6d9612efd6d1a1e079020ce1f5ee"
+        },
+        {
+          "path": "catalog/content/skills/html-report/references/checklist.md",
+          "size": 1908,
+          "sha256": "c35f4dfe773070f33f4e45a339478cd790b9f78b1b14c087e10cf06b73ad850f"
+        },
+        {
+          "path": "catalog/content/skills/html-report/references/design-tokens.md",
+          "size": 3152,
+          "sha256": "75930acbe3d697d3cc5432c4520dd44547e95aad251efb74322bc32793a000b6"
+        }
+      ],
+      "digest": "0b560c0fe08f887ec8947316bb9b130df8f53dda63b85be5705ee4118c7c7319",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/skills/html-report",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.skill.research-guide",
+      "slug": "research-guide",
+      "version": "1.0.0",
+      "name": {
+        "zh": "深度调研",
+        "en": "Deep Research"
+      },
+      "summary": {
+        "zh": "把模糊问题拆成可检索的子问题，交叉验证后沉淀成带出处的调研结论。",
+        "en": "Break a vague question into searchable sub-questions, cross-check the evidence, and deliver cited conclusions."
+      },
+      "description": {
+        "zh": "适用于商圈与竞品调研、品类趋势、渠道政策与厂商动作跟踪。强调先立假设、再找证据、标注置信度，最终输出结构化结论而非资料堆砌。",
+        "en": "For market and competitor research, category trends, channel policy and manufacturer moves. Start with hypotheses, gather evidence, label confidence, and deliver structured conclusions instead of a pile of links."
+      },
+      "category": {
+        "primary": "skill/analysis",
+        "labels": [
+          "调研",
+          "竞品"
+        ]
+      },
+      "tags": [
+        "调研",
+        "竞品",
+        "商圈",
+        "信息核验"
+      ],
+      "highlights": [
+        "问题拆解与检索路径设计",
+        "多源交叉验证与置信度标注",
+        "结论先行的结构化交付"
+      ],
+      "examples": [
+        {
+          "label": "竞品动作跟踪",
+          "prompt": "用深度调研技能，梳理本区域三家主要竞品最近一个季度的铺市、促销和价格动作，标注来源与置信度，最后给对我们的影响判断。"
+        },
+        {
+          "label": "品类机会扫描",
+          "prompt": "调研这个品类未来 12 个月的增长驱动和风险，按证据强度分层，不要输出没有出处的结论。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "竞品季度跟踪",
+          "summary": "把分散信息整理成可对比的动作清单。"
+        },
+        {
+          "title": "新品类评估",
+          "summary": "先列假设，再按证据强度给结论。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": "SKILL.md",
+          "target": "skills/{name}",
+          "source": "catalog/content/skills/research-guide",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": false,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "none",
+        "network": true,
+        "shell": false,
+        "credentials": false,
+        "data_scope": []
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy",
+          "trae",
+          "dsh"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "skill": {
+        "format": "agentskills/v1",
+        "name": "research-guide",
+        "entry": "SKILL.md"
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/skills/research-guide/SKILL.md",
+          "size": 7708,
+          "sha256": "ce1a799d394b5b897039531cf39566231135ec6230abd12ab53acb6e7559108b"
+        },
+        {
+          "path": "catalog/content/skills/research-guide/references/comparison-analysis.md",
+          "size": 10499,
+          "sha256": "c047789bf49634cd00a18aa98139ed7cb7b6717fadc97a3c269eac225338da34"
+        },
+        {
+          "path": "catalog/content/skills/research-guide/references/research-report.md",
+          "size": 5695,
+          "sha256": "bcab0e25b2383e42281bc69a1caee7b66fa0e513bd7e534bfc81bec087d13b41"
+        }
+      ],
+      "digest": "5c9720167a0aa0e0785928f4010286b27f71ce126482c5463e5aae96086fe472",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/skills/research-guide",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.skill.schedule",
+      "slug": "schedule",
+      "version": "1.0.0",
+      "name": {
+        "zh": "定时任务",
+        "en": "Scheduled Automation"
+      },
+      "summary": {
+        "zh": "把例会提醒、日报生成、库存巡检变成可重复执行的定时任务。",
+        "en": "Turn meeting reminders, daily reports and inventory checks into repeatable scheduled tasks."
+      },
+      "description": {
+        "zh": "用于建立周期性动作：每周经营数据汇总、每日库存预警、月初目标进度提醒。支持创建、查看、暂停与立即执行。",
+        "en": "Set up recurring actions: weekly operating summaries, daily inventory alerts and month-start target reminders. Create, inspect, pause and run tasks immediately."
+      },
+      "category": {
+        "primary": "skill/automation",
+        "labels": [
+          "自动化",
+          "定时"
+        ]
+      },
+      "tags": [
+        "自动化",
+        "定时",
+        "日报",
+        "巡检"
+      ],
+      "highlights": [
+        "定时 / 周期任务编排",
+        "任务查看与暂停",
+        "支持立即执行验证"
+      ],
+      "examples": [
+        {
+          "label": "每日库存巡检",
+          "prompt": "用定时任务技能，每个工作日早上 8:30 检查库存低于安全库存的 SKU，把结果发到经营群。"
+        },
+        {
+          "label": "周一经营摘要",
+          "prompt": "每周一早上生成上周出货、回款、费用摘要，并对比目标进度。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "每日库存预警",
+          "summary": "低于安全库存自动提醒。"
+        },
+        {
+          "title": "周经营摘要",
+          "summary": "周一早上自动汇总上周数据。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": "SKILL.md",
+          "target": "skills/{name}",
+          "source": "catalog/content/skills/schedule",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": false,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "read",
+        "network": false,
+        "shell": true,
+        "credentials": false,
+        "data_scope": []
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy",
+          "trae",
+          "dsh"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "skill": {
+        "format": "agentskills/v1",
+        "name": "schedule",
+        "entry": "SKILL.md"
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/skills/schedule/SKILL.md",
+          "size": 9878,
+          "sha256": "d21693a4dace9f50400ccaf9730eeac38e797dc824fdeb2b3ea60ae0d98ad862"
+        }
+      ],
+      "digest": "22601ca8bf14a5980728e3c7b172763fa7f32b60ab1ff2e19aa238587ccfa526",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/skills/schedule",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.skill.xlsx",
+      "slug": "xlsx",
+      "version": "1.0.0",
+      "name": {
+        "zh": "表格处理",
+        "en": "Spreadsheet Work"
+      },
+      "summary": {
+        "zh": "读写 Excel / CSV，做数据清洗、公式、透视与批量整理。",
+        "en": "Read and write Excel/CSV: clean data, apply formulas, build pivots and batch-organize workbooks."
+      },
+      "description": {
+        "zh": "处理出货明细、订单台账、库存表、门店档案等表格：合并多表、清洗脏数据、补公式与格式、生成汇总透视，并保留原始数据可追溯。",
+        "en": "Work with shipment lines, order ledgers, inventory sheets and store master data: merge workbooks, clean dirty data, add formulas and formats, build summary pivots, and keep the source traceable."
+      },
+      "category": {
+        "primary": "skill/data",
+        "labels": [
+          "表格",
+          "数据清洗"
+        ]
+      },
+      "tags": [
+        "Excel",
+        "数据清洗",
+        "透视表",
+        "台账"
+      ],
+      "highlights": [
+        "多表合并与字段对齐",
+        "公式与格式批量处理",
+        "汇总结果可复核"
+      ],
+      "examples": [
+        {
+          "label": "多表合并",
+          "prompt": "用表格处理技能，把这三个区域的出货明细合并成一张总表，字段对齐并标注来源文件，重复行按订单号去重。"
+        },
+        {
+          "label": "库存透视",
+          "prompt": "基于这份库存表做按仓、按品类、按库龄段的透视，标出临期和滞销金额。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "台账合并",
+          "summary": "多区域多文件合成一张可复核总表。"
+        },
+        {
+          "title": "库存体检",
+          "summary": "按仓、品类与库龄段生成透视。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": "SKILL.md",
+          "target": "skills/{name}",
+          "source": "catalog/content/skills/xlsx",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": false,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "write",
+        "network": false,
+        "shell": false,
+        "credentials": false,
+        "data_scope": []
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy",
+          "trae",
+          "dsh"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "skill": {
+        "format": "agentskills/v1",
+        "name": "xlsx",
+        "entry": "SKILL.md"
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/skills/xlsx/SKILL.md",
+          "size": 6210,
+          "sha256": "816c8da019b275d3172b732b40db424cbf4386997d689d975e2ace71df97c87b"
+        }
+      ],
+      "digest": "f5d993d4540181fa199e96494652248401fc72b94efcd689806e85d44397fe46",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/skills/xlsx",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.expert.fmcg-inventory-controller",
+      "slug": "fmcg-inventory-controller",
+      "version": "1.0.0",
+      "name": {
+        "zh": "库存管控师 · 沈度",
+        "en": "Inventory Controller"
+      },
+      "summary": {
+        "zh": "盯周转、临期与安全库存，把仓库里的钱盘活。",
+        "en": "Watch turnover, expiry and safety stock to unlock cash tied up in the warehouse."
+      },
+      "description": {
+        "zh": "围绕库存健康度工作：计算周转天数与库龄结构，识别临期与滞销风险，设定安全库存与补货点，给出跨仓调拨和清库方案，减少资金占用与报损。",
+        "en": "Focus on inventory health: compute turnover days and age structure, identify expiry and slow-moving risk, set safety stock and reorder points, and propose cross-warehouse transfers and clearance plans to reduce capital lock-up and write-offs."
+      },
+      "category": {
+        "primary": "expert/inventory",
+        "labels": [
+          "库存",
+          "临期"
+        ]
+      },
+      "tags": [
+        "库存",
+        "周转",
+        "临期",
+        "调拨"
+      ],
+      "highlights": [
+        "库龄结构与周转天数诊断",
+        "临期滞销分级处置",
+        "安全库存与补货点测算"
+      ],
+      "examples": [
+        {
+          "label": "库存体检",
+          "prompt": "召唤库存管控师，对这份分仓库存做体检：周转天数、库龄结构、临期金额、滞销 SKU，并给出处置优先级。"
+        },
+        {
+          "label": "安全库存重算",
+          "prompt": "按过去 12 个月的出货波动重算这些 SKU 的安全库存和补货点，缺货率目标 3%。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "月度库存体检",
+          "summary": "周转、库龄、临期一张表看清。"
+        },
+        {
+          "title": "清库方案",
+          "summary": "跨仓调拨与促销清库优先级。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": ".codebuddy-plugin/plugin.json",
+          "target": "plugins/cache/mdl-plugin-market/{name}/{version}",
+          "source": "catalog/content/marketplace/plugins/fmcg-inventory-controller",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": false,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "read",
+        "network": false,
+        "shell": false,
+        "credentials": false,
+        "data_scope": [
+          "inventory",
+          "sales"
+        ]
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "plugin": {
+        "manifest_path": ".codebuddy-plugin/plugin.json",
+        "entrypoints": {
+          "expert_type": "agent",
+          "agent_name": "fmcg-inventory-controller",
+          "agents": [
+            "agents/fmcg-inventory-controller.md"
+          ]
+        },
+        "bundled_skills": []
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-inventory-controller/.codebuddy-plugin/plugin.json",
+          "size": 1847,
+          "sha256": "4cbac982f9a7241faa5ca631c0ce002900f68d31b51c35ea709239236313b283"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-inventory-controller/agents/fmcg-inventory-controller.md",
+          "size": 3467,
+          "sha256": "be5afb3fc6442391ec484b89ce1a6e623bd3ea18a7132e6a69c3ba6e5a80511a"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-inventory-controller/avatars/expert.png",
+          "size": 28641,
+          "sha256": "ff406287eed17c8d61128db00f16b071a97a6a2f3187c076d0834b9ed7414ef2"
+        }
+      ],
+      "digest": "89b7b1085a6186fff4235075dc2ea5b72eea9a7f8c199c50d12dca4a66288dd8",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/marketplace/plugins/fmcg-inventory-controller",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.expert.fmcg-order-advisor",
+      "slug": "fmcg-order-advisor",
+      "version": "1.0.0",
+      "name": {
+        "zh": "订货顾问 · 陆致",
+        "en": "Order Advisor"
+      },
+      "summary": {
+        "zh": "看订单结构、补货节奏与政策返利，帮经销商把订货会开成赚钱的会。",
+        "en": "Read order structure, replenishment cadence and rebates to make order meetings profitable."
+      },
+      "description": {
+        "zh": "面向快消经销商的订货决策：结合历史出货、渠道库存与厂商政策，判断该订什么、订多少、什么时候订；识别压货风险与返利临界点，输出可直接执行的订货清单。",
+        "en": "Order decisions for FMCG distributors: combine shipment history, channel inventory and manufacturer policy to decide what, how much and when to order; identify overstock risk and rebate thresholds, and output an executable order list."
+      },
+      "category": {
+        "primary": "expert/order",
+        "labels": [
+          "订货",
+          "返利"
+        ]
+      },
+      "tags": [
+        "订货",
+        "补货",
+        "渠道政策",
+        "返利"
+      ],
+      "highlights": [
+        "订货结构与本量利测算",
+        "返利阶梯临界点判断",
+        "压货与动销匹配检查"
+      ],
+      "examples": [
+        {
+          "label": "订货会准备",
+          "prompt": "召唤订货顾问，基于本季度出货和渠道库存，给我下个月订货会建议：订什么、订多少、哪些 SKU 要压、返利临界点在哪。"
+        },
+        {
+          "label": "压货风险检查",
+          "prompt": "检查这份订货单的压货风险：按 SKU 对比历史动销和现有库存，标出 60 天卖不完的部分。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "月度订货会",
+          "summary": "带着订货清单和政策测算上会。"
+        },
+        {
+          "title": "返利临界点",
+          "summary": "算清多订多少才能拿到下一档返利。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": ".codebuddy-plugin/plugin.json",
+          "target": "plugins/cache/mdl-plugin-market/{name}/{version}",
+          "source": "catalog/content/marketplace/plugins/fmcg-order-advisor",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": false,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "read",
+        "network": false,
+        "shell": false,
+        "credentials": false,
+        "data_scope": [
+          "sales",
+          "inventory",
+          "policy"
+        ]
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "plugin": {
+        "manifest_path": ".codebuddy-plugin/plugin.json",
+        "entrypoints": {
+          "expert_type": "agent",
+          "agent_name": "fmcg-order-advisor",
+          "agents": [
+            "agents/fmcg-order-advisor.md"
+          ]
+        },
+        "bundled_skills": []
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-advisor/.codebuddy-plugin/plugin.json",
+          "size": 1994,
+          "sha256": "ca694f9f8f9c99318a669b66da5962b4e97a40ac2c70e9edd0c04b33603b301f"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-advisor/agents/fmcg-order-advisor.md",
+          "size": 4137,
+          "sha256": "c80ad2af7e7d4b74464cdd0ea0a3e2f9fc77e2174798528dae7719fbb6150434"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-advisor/avatars/expert.png",
+          "size": 29048,
+          "sha256": "3f322810c6e545ae77409b48939d53ae01f25eb0beebb0e5753b8a81855dd5ef"
+        }
+      ],
+      "digest": "0abd273bbb220b8bc25fc212152166e8458a9bb4058cc7b69eb54bf87fb7f134",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/marketplace/plugins/fmcg-order-advisor",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.expert.fmcg-store-audit-analyst",
+      "slug": "fmcg-store-audit-analyst",
+      "version": "1.0.0",
+      "name": {
+        "zh": "门店动销分析师 · 何砚",
+        "en": "Store Audit Analyst"
+      },
+      "summary": {
+        "zh": "从门店覆盖、陈列与拜访数据里找出动销卡点。",
+        "en": "Find sell-out bottlenecks in store coverage, display and visit data."
+      },
+      "description": {
+        "zh": "面向经销商的终端管理：分析门店覆盖与活跃度、陈列执行、拜访路线与频次，结合单店产出定位低效门店与空白片区，输出可落地的拜访与铺市计划。",
+        "en": "Retail management for distributors: analyze store coverage and activity, display execution, visit routes and frequency, combine per-store output to locate low-efficiency stores and blank areas, and output an actionable visit and distribution plan."
+      },
+      "category": {
+        "primary": "expert/store",
+        "labels": [
+          "门店",
+          "拜访"
+        ]
+      },
+      "tags": [
+        "门店",
+        "动销",
+        "陈列",
+        "拜访"
+      ],
+      "highlights": [
+        "门店覆盖与活跃度分层",
+        "单店产出与陈列执行诊断",
+        "拜访路线与铺市优先级"
+      ],
+      "examples": [
+        {
+          "label": "低效门店定位",
+          "prompt": "召唤门店动销分析师，基于这份门店档案和拜访记录，找出覆盖高但产出低的门店，并给出原因假设和拜访优先级。"
+        },
+        {
+          "label": "空白片区排查",
+          "prompt": "按区域和门店类型看覆盖缺口，列出值得优先铺市的空白片区和理由。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "门店分层",
+          "summary": "覆盖、活跃、产出三维分层。"
+        },
+        {
+          "title": "拜访排线",
+          "summary": "按产出与空白片区排优先级。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": ".codebuddy-plugin/plugin.json",
+          "target": "plugins/cache/mdl-plugin-market/{name}/{version}",
+          "source": "catalog/content/marketplace/plugins/fmcg-store-audit-analyst",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": false,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "read",
+        "network": false,
+        "shell": false,
+        "credentials": false,
+        "data_scope": [
+          "stores",
+          "visits",
+          "sales"
+        ]
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "plugin": {
+        "manifest_path": ".codebuddy-plugin/plugin.json",
+        "entrypoints": {
+          "expert_type": "agent",
+          "agent_name": "fmcg-store-audit-analyst",
+          "agents": [
+            "agents/fmcg-store-audit-analyst.md"
+          ]
+        },
+        "bundled_skills": []
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-store-audit-analyst/.codebuddy-plugin/plugin.json",
+          "size": 1869,
+          "sha256": "39d19d5d2f329377a37d5b2207835a9e21fc6f5aa2f0b9ce73525c6bce4f78cb"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-store-audit-analyst/agents/fmcg-store-audit-analyst.md",
+          "size": 3743,
+          "sha256": "e7db1800698888ed21151738d314e439b10a0f0524be7decfee508aadddfcad4"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-store-audit-analyst/avatars/expert.png",
+          "size": 28996,
+          "sha256": "06347ff47be3b6887d2f3d4c66c5490ac3a08ef0ddf6ebf083e6ae54fb6292cd"
+        }
+      ],
+      "digest": "c1caa0a6037fb76547fc87de6362fa24bea86e90787aee4528e3ce2d0bb3b253",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/marketplace/plugins/fmcg-store-audit-analyst",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.team.fmcg-business-review-team",
+      "slug": "fmcg-business-review-team",
+      "version": "1.0.0",
+      "name": {
+        "zh": "经销商经营复盘专家团",
+        "en": "Distributor Review Team"
+      },
+      "summary": {
+        "zh": "数据整理、财务核算、品类分析、报告撰写四岗协同，产出一份能上会的复盘。",
+        "en": "Data, finance, category and writing roles collaborate on a review ready for the management meeting."
+      },
+      "description": {
+        "zh": "由复盘主理人统筹：先把出货、回款、费用、库存数据对齐口径，再做毛利与费用归因、品类与渠道结构拆解，最后汇编成带结论与行动项的复盘报告。",
+        "en": "Led by a review lead: align shipment, receivable, expense and inventory definitions, attribute gross margin and expenses, break down category and channel structure, and compile a review report with conclusions and actions."
+      },
+      "category": {
+        "primary": "team/review",
+        "labels": [
+          "专家团",
+          "经营复盘"
+        ]
+      },
+      "tags": [
+        "经营复盘",
+        "专家团",
+        "毛利归因",
+        "汇报"
+      ],
+      "highlights": [
+        "五角色分工，主理人统一收口",
+        "口径对齐后再做归因",
+        "交付结论、行动项与责任人"
+      ],
+      "examples": [
+        {
+          "label": "季度复盘",
+          "prompt": "召唤经营复盘专家团，基于这四张表做季度复盘：先对齐口径，再拆毛利和费用，最后给我一页上会结论。"
+        },
+        {
+          "label": "费用归因",
+          "prompt": "让专家团拆解这个季度费用超支的原因，按区域、品类和活动类型归因，并给出下季度控制建议。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "季度经营复盘",
+          "summary": "五角色协同，主理人统一收口。"
+        },
+        {
+          "title": "费用专项复盘",
+          "summary": "按区域、品类与活动拆费用归因。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": ".codebuddy-plugin/plugin.json",
+          "target": "plugins/cache/mdl-plugin-market/{name}/{version}",
+          "source": "catalog/content/marketplace/plugins/fmcg-business-review-team",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": true,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "read",
+        "network": false,
+        "shell": false,
+        "credentials": false,
+        "data_scope": [
+          "sales",
+          "receivables",
+          "expenses",
+          "inventory"
+        ]
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "plugin": {
+        "manifest_path": ".codebuddy-plugin/plugin.json",
+        "entrypoints": {
+          "expert_type": "team",
+          "agent_name": "review-lead",
+          "agents": [
+            "agents/review-lead.md",
+            "agents/data-steward.md",
+            "agents/finance-analyst.md",
+            "agents/category-analyst.md",
+            "agents/report-writer.md"
+          ]
+        },
+        "bundled_skills": [
+          "skills/business-review-playbook"
+        ]
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/.codebuddy-plugin/plugin.json",
+          "size": 3719,
+          "sha256": "a13b4f83c70320a7d14dc8097ff9c4d28f11d91a02b782fb828d35e1bedb4d98"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/agents/category-analyst.md",
+          "size": 2418,
+          "sha256": "e2f5d928e2961f5e42525f945b9ab32a7f1c446809f772158dbab1f9d19e35fd"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/agents/data-steward.md",
+          "size": 2105,
+          "sha256": "4af9bbf50ea27ddcfac8ee80f872165afe9824932e91bc761e106f93903b3ecf"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/agents/finance-analyst.md",
+          "size": 2415,
+          "sha256": "a96b38c3d3f99409f12d5fc9a3006547346d86a45d06c61cea0911464002ac5d"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/agents/report-writer.md",
+          "size": 2200,
+          "sha256": "3700e18414693a40182fa70653ad4fade674fae0ab8a4e4234c016addf0cfbc7"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/agents/review-lead.md",
+          "size": 3545,
+          "sha256": "441d632637a6cc2bebda5fcfc736b30d8ae03313ad1eeef6698bcad9a153daed"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/avatars/category-analyst.png",
+          "size": 29560,
+          "sha256": "7b871599c36503c9ab641a43ae406e57da0ea15497dadd9a9077031c6a7ba01d"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/avatars/data-steward.png",
+          "size": 26753,
+          "sha256": "6d7392f50b77ec69db11debd85073dfd7a75b5818c0df72089dad8b931bd4d04"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/avatars/finance-analyst.png",
+          "size": 30867,
+          "sha256": "5cbc3755bbcee80c3f3eded24fe8b78f6f1169d7a6bdae18b3d164b3511988c8"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/avatars/report-writer.png",
+          "size": 25510,
+          "sha256": "0a93df0eb34989d28238f1cc1a459cce8dcbde5f683f14674ff85e3eaf8a5799"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/avatars/review-lead.png",
+          "size": 28783,
+          "sha256": "6c33d8531ab639efe5567ea3fb03fb314ebc00d4fd8e2c692f569c60ff5cb663"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/avatars/team.png",
+          "size": 29958,
+          "sha256": "219a9abe63491699de3984ac2c5bb258821cd3ffe6c6000c47ef9f36f03d2504"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-business-review-team/skills/business-review-playbook/SKILL.md",
+          "size": 3213,
+          "sha256": "e697ba733f054c55ab67891cefdaf99d2b4abe23d26a9b8fbcb2c83211bb131e"
+        }
+      ],
+      "digest": "f364ccf06388acf12a47c21cc6d5e1434409696eb7c1de17f1b65a0ef929c333",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/marketplace/plugins/fmcg-business-review-team",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.team.fmcg-order-inventory-team",
+      "slug": "fmcg-order-inventory-team",
+      "version": "1.0.0",
+      "name": {
+        "zh": "订货库存协同专家团",
+        "en": "Order & Inventory Team"
+      },
+      "summary": {
+        "zh": "需求预测、库存体检、补货执行三方会诊，平衡缺货与压货。",
+        "en": "Demand forecasting, inventory health and replenishment execution work together to balance stock-outs and overstock."
+      },
+      "description": {
+        "zh": "面向每月订货会与日常补货：预测组给出分品类需求区间，库存组体检周转与临期，执行组折算成订货单与调拨单，风险岗复核资金占用与厂商政策约束。",
+        "en": "For monthly order meetings and daily replenishment: forecasting gives category demand ranges, inventory checks turnover and expiry, execution converts them into purchase and transfer orders, and risk reviews capital use and manufacturer policy constraints."
+      },
+      "category": {
+        "primary": "team/order-inventory",
+        "labels": [
+          "专家团",
+          "订货库存"
+        ]
+      },
+      "tags": [
+        "订货",
+        "库存",
+        "专家团",
+        "协同"
+      ],
+      "highlights": [
+        "需求区间而非单点预测",
+        "库存与需求联合校准",
+        "输出订货单与调拨建议"
+      ],
+      "examples": [
+        {
+          "label": "月度订货协同",
+          "prompt": "召唤订货库存协同专家团，基于历史出货、分仓库存和厂商政策，给出下月分品类订货区间和调拨建议。"
+        },
+        {
+          "label": "缺货与压货平衡",
+          "prompt": "让专家团评估当前补货计划：哪些 SKU 会缺货、哪些会压货，给出调整后的订货单。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "月度订货会",
+          "summary": "需求、库存、执行、风险四方会诊。"
+        },
+        {
+          "title": "补货计划校准",
+          "summary": "同时看缺货与压货风险。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": ".codebuddy-plugin/plugin.json",
+          "target": "plugins/cache/mdl-plugin-market/{name}/{version}",
+          "source": "catalog/content/marketplace/plugins/fmcg-order-inventory-team",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": true,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "read",
+        "network": false,
+        "shell": false,
+        "credentials": false,
+        "data_scope": [
+          "sales",
+          "inventory",
+          "policy"
+        ]
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "plugin": {
+        "manifest_path": ".codebuddy-plugin/plugin.json",
+        "entrypoints": {
+          "expert_type": "team",
+          "agent_name": "order-inventory-lead",
+          "agents": [
+            "agents/order-inventory-lead.md",
+            "agents/demand-forecaster.md",
+            "agents/inventory-health.md",
+            "agents/replenishment-executor.md",
+            "agents/risk-reviewer.md"
+          ]
+        },
+        "bundled_skills": [
+          "skills/order-inventory-sop"
+        ]
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/.codebuddy-plugin/plugin.json",
+          "size": 3670,
+          "sha256": "6b701f6e01ff821753e0a58d0c946e4a9a833560a00bb1625955228a173c14bd"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/agents/demand-forecaster.md",
+          "size": 1935,
+          "sha256": "302ae140788127f501ea2e340cb7d637ce07c00bde1a3ed2ba8bfaba7cdc828a"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/agents/inventory-health.md",
+          "size": 1930,
+          "sha256": "6b12dec04efaf309e6fc01a377ca17e6ea76bf04ea8fbd0b0665750f1cb8ecf0"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/agents/order-inventory-lead.md",
+          "size": 2622,
+          "sha256": "6dfa47356047fce266e153f765b3f56f96bf592c513369be564b7aa44f9625a3"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/agents/replenishment-executor.md",
+          "size": 1905,
+          "sha256": "3a5407f886ef83995f6e88315302b781e11c176699c5a86ee6db7d9467569c12"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/agents/risk-reviewer.md",
+          "size": 1850,
+          "sha256": "f9b81954bbfe7dd4b41abd28ea3a850fd4d8c94dfed52ce767ea696f02d1ac8e"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/avatars/demand-forecaster.png",
+          "size": 28227,
+          "sha256": "52be67c6ed0580da8fc7bd9c88acadb167bc843327bd07e3fe6efd31d573ddec"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/avatars/inventory-health.png",
+          "size": 29563,
+          "sha256": "e230f5fdf8bc076a1330aecc5ae2cbf4479100e5de95fe19d406ce8d803436f0"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/avatars/order-inventory-lead.png",
+          "size": 28813,
+          "sha256": "ffe7d7a920a7e5b17384048d01aafb50c1cc9f046472285810f4dc39b48d77cc"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/avatars/replenishment-executor.png",
+          "size": 29270,
+          "sha256": "6343b92b458b187ddcdff0423db0980e3fb08b6854a4a66f35fbbbe7928bc327"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/avatars/risk-reviewer.png",
+          "size": 20474,
+          "sha256": "80e1d1efe297376a39fe39be5b50441eaf6356343d92b7e7293b482ff7b30d2c"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/avatars/team.png",
+          "size": 30060,
+          "sha256": "d78fcc2021c0c9bda50069afbf4c93f87a2a1f417e535d5faf5a4eb98a8ed536"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team/skills/order-inventory-sop/SKILL.md",
+          "size": 2576,
+          "sha256": "16867f4930762175eca235ac8e79db4764604c1a4d7c653d7d3da8a9f38b8cfb"
+        }
+      ],
+      "digest": "f4726ab75ce6a37c934ff9bc739c8556ff9381105f84937b44ae57339febcd5f",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/marketplace/plugins/fmcg-order-inventory-team",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.connector.fmcg-erp-readonly",
+      "slug": "fmcg-erp-readonly",
+      "version": "1.0.0",
+      "name": {
+        "zh": "S6 ERP 只读查询",
+        "en": "S6 ERP Read-only"
+      },
+      "summary": {
+        "zh": "只读查询客户、SKU、订单、出货、库存与应收，不写任何单据。",
+        "en": "Read-only queries for customers, SKUs, orders, shipments, inventory and receivables, with no writes."
+      },
+      "description": {
+        "zh": "以 MCP 连接器形式接入经销商 S6 ERP 的只读网关：覆盖客户档案、商品与箱规、已审核订单、出货与退货、分仓库存、应收与账期。所有工具均为只读，适合先把数据拉出来再做订货、库存与经营分析。",
+        "en": "An MCP connector to the distributor's S6 ERP read-only gateway: customer master data, products and case packs, approved orders, shipments and returns, warehouse inventory, receivables and terms. Every tool is read-only, ideal for pulling data before order, inventory and business analysis."
+      },
+      "category": {
+        "primary": "connector/erp",
+        "labels": [
+          "连接器",
+          "只读"
+        ]
+      },
+      "tags": [
+        "连接器",
+        "MCP",
+        "ERP",
+        "只读",
+        "需本机网关"
+      ],
+      "highlights": [
+        "只读工具集，不含写单据能力",
+        "订单 / 出货 / 库存 / 应收分域查询",
+        "需在本机 18080 端口运行只读网关"
+      ],
+      "examples": [
+        {
+          "label": "上周出货",
+          "prompt": "用 S6 ERP 只读连接器，查华东区上周的出货明细，按客户和 SKU 汇总。"
+        },
+        {
+          "label": "超账期应收",
+          "prompt": "列出这个月应收超过账期的客户，按逾期天数排序。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "数据拉取",
+          "summary": "把 ERP 数据直接带进对话。"
+        },
+        {
+          "title": "应收跟踪",
+          "summary": "按账期找逾期客户。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": ".codebuddy-plugin/plugin.json",
+          "target": "plugins/cache/mdl-plugin-market/{name}/{version}",
+          "source": "catalog/content/marketplace/plugins/fmcg-erp-readonly",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": false,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [
+        "erp:read"
+      ],
+      "permissions": {
+        "filesystem": "none",
+        "network": true,
+        "shell": false,
+        "credentials": true,
+        "data_scope": [
+          "customers",
+          "products",
+          "orders",
+          "shipments",
+          "inventory",
+          "receivables"
+        ]
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "host"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "plugin": {
+        "manifest_path": ".codebuddy-plugin/plugin.json",
+        "entrypoints": {
+          "mcp_servers": [
+            "fmcg-erp-readonly"
+          ]
+        },
+        "bundled_skills": [
+          "skills/fmcg-erp-readonly"
+        ]
+      },
+      "connector": {
+        "type": "mcp",
+        "transport": "streamable-http",
+        "endpoint": "http://127.0.0.1:18080/mcp",
+        "auth": "none"
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-erp-readonly/.codebuddy-plugin/plugin.json",
+          "size": 1627,
+          "sha256": "8146629c5b015ebfaf06409071bab52ff48fad63867de0640fb1cce4ac1d9502"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-erp-readonly/ai.workbuddy/assets/icon.svg",
+          "size": 435,
+          "sha256": "7a2c892a6d2af37309d4b149197f341661b965fd74161e8b5b8687927a7cb1f1"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-erp-readonly/mcp.json",
+          "size": 206,
+          "sha256": "a23d6f644ba9acf3d7e3e46c348952a71df44f79dc748a71d38c658665cf7042"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-erp-readonly/skills/fmcg-erp-readonly/SKILL.md",
+          "size": 1875,
+          "sha256": "b84be4d6f4c4f20037623903e7190e8d38034b2611996ba71e71ef624b986e37"
+        }
+      ],
+      "digest": "88b70fc0f2fc75699d0b0d47696bb48c3d099e1b65cf8173560d2af4c794fcbc",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/marketplace/plugins/fmcg-erp-readonly",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.connector.fmcg-sellout-dashboard",
+      "slug": "fmcg-sellout-dashboard",
+      "version": "1.0.0",
+      "name": {
+        "zh": "门店动销看板",
+        "en": "Store Sell-out Dashboard"
+      },
+      "summary": {
+        "zh": "按区域、渠道、门店类型查询覆盖、有货率、陈列与拜访执行。",
+        "en": "Query coverage, on-shelf availability, display and visit execution by region, channel and store type."
+      },
+      "description": {
+        "zh": "以 MCP 连接器形式接入门店动销看板：门店覆盖与活跃度、有货率（OSA）、陈列执行、拜访频次、单店产出。适合与订货顾问、门店动销分析师搭配使用，把终端执行数据直接带进对话。",
+        "en": "An MCP connector to the store sell-out dashboard: coverage and activity, on-shelf availability (OSA), display execution, visit frequency and per-store output. Pairs well with the order advisor and store audit analyst by bringing retail execution data into the conversation."
+      },
+      "category": {
+        "primary": "connector/data",
+        "labels": [
+          "连接器",
+          "门店"
+        ]
+      },
+      "tags": [
+        "连接器",
+        "MCP",
+        "门店",
+        "动销",
+        "需本机网关"
+      ],
+      "highlights": [
+        "覆盖 / 活跃 / OSA 分区域下钻",
+        "陈列与拜访执行明细",
+        "需在本机 18081 端口运行动销网关"
+      ],
+      "examples": [
+        {
+          "label": "区域 OSA",
+          "prompt": "用门店动销看板连接器，看华东区各城市的 OSA 和陈列执行率，找出低于平均的城市。"
+        },
+        {
+          "label": "拜访执行",
+          "prompt": "统计上个月各业代的拜访频次和有效拜访率，按片区排名。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "终端执行看板",
+          "summary": "覆盖、OSA、陈列、拜访一屏看清。"
+        },
+        {
+          "title": "片区对比",
+          "summary": "按城市和渠道找差距。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "direct",
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": ".codebuddy-plugin/plugin.json",
+          "target": "plugins/cache/mdl-plugin-market/{name}/{version}",
+          "source": "catalog/content/marketplace/plugins/fmcg-sellout-dashboard",
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": false,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [
+        "retail:read"
+      ],
+      "permissions": {
+        "filesystem": "none",
+        "network": true,
+        "shell": false,
+        "credentials": true,
+        "data_scope": [
+          "stores",
+          "visits",
+          "osa",
+          "display"
+        ]
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "host"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "plugin": {
+        "manifest_path": ".codebuddy-plugin/plugin.json",
+        "entrypoints": {
+          "mcp_servers": [
+            "fmcg-sellout-dashboard"
+          ]
+        },
+        "bundled_skills": [
+          "skills/fmcg-sellout-dashboard"
+        ]
+      },
+      "connector": {
+        "type": "mcp",
+        "transport": "streamable-http",
+        "endpoint": "http://127.0.0.1:18081/mcp",
+        "auth": "none"
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-sellout-dashboard/.codebuddy-plugin/plugin.json",
+          "size": 1699,
+          "sha256": "4f378f2c33207c9a532fb0505d5b98ad9ea4681664ec487e876977462d672f21"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-sellout-dashboard/ai.workbuddy/assets/icon.svg",
+          "size": 336,
+          "sha256": "45ac18bd1e28fa71413cc5b11da61c7f904c3a9d4062fca12aebb1452f25d9b9"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-sellout-dashboard/mcp.json",
+          "size": 211,
+          "sha256": "71f55e4ac760d0839d380d17ce67a0c42b6a7d8ffec3de47af109001e87f891f"
+        },
+        {
+          "path": "catalog/content/marketplace/plugins/fmcg-sellout-dashboard/skills/fmcg-sellout-dashboard/SKILL.md",
+          "size": 1752,
+          "sha256": "f9da4ced0ff8f3add93550ffff49b84dd19578d66886e7f6b02f925b0bcc4e6a"
+        }
+      ],
+      "digest": "206ba963277c760c8e0d063c46f09a0518d1f04caaea6a2dffdf4479726c92f0",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/marketplace/plugins/fmcg-sellout-dashboard",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.template.business-dashboard",
+      "slug": "business-dashboard",
+      "version": "1.0.0",
+      "name": {
+        "zh": "经销商经营看板（案例）",
+        "en": "Distributor Business Dashboard (Template)"
+      },
+      "summary": {
+        "zh": "用经营分析技能做出来的单文件看板样板，换成自己的数据即可复现。",
+        "en": "A single-file dashboard sample made with the business analysis skill; swap in your own data to reproduce it."
+      },
+      "description": {
+        "zh": "这是一条模板案例，不是可安装的代码包。它展示成品长什么样、依赖哪些技能、需要准备哪些数据，以及如何用同一段提示词再做一遍。适合先看效果再决定是否安装依赖技能。",
+        "en": "This is a template case, not an installable package. It shows what the output looks like, which skills it depends on, what data is required, and how to reproduce it with the same prompt. Use it to preview the result before installing dependencies."
+      },
+      "category": {
+        "primary": "template/dashboard",
+        "labels": [
+          "案例",
+          "经营看板"
+        ]
+      },
+      "tags": [
+        "模板",
+        "案例",
+        "看板",
+        "经营复盘"
+      ],
+      "highlights": [
+        "成品与复现配方一起提供",
+        "依赖精确到版本",
+        "数据要求写清楚"
+      ],
+      "examples": [
+        {
+          "label": "做同款",
+          "prompt": "用【经销商经营看板】案例的做法，基于我上传的销售、回款和库存表，生成同款单文件 HTML 看板：顶部四个核心指标，中部区域和品类对比，底部问题和行动项。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "经营看板样板",
+          "summary": "先看成品，再用自己的数据复现。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "prompt"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": "prompt.md",
+          "target": null,
+          "source": "catalog/content/templates/business-dashboard",
+          "dependencies": [
+            {
+              "asset_id": "mdl.skill.business-ops-analysis",
+              "version": "1.0.0",
+              "optional": false
+            },
+            {
+              "asset_id": "mdl.skill.html-report",
+              "version": "1.0.0",
+              "optional": false
+            }
+          ]
+        },
+        "toggle": {
+          "supported": false,
+          "key": null,
+          "default": false,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": true,
+          "same_as": true
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "write",
+        "network": false,
+        "shell": false,
+        "credentials": false,
+        "data_scope": [
+          "sales",
+          "receivables",
+          "inventory"
+        ]
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "showcase": {
+        "artifact_url": "catalog/content/templates/business-dashboard/preview.html",
+        "thumbnail": "catalog/content/templates/business-dashboard/cover.svg",
+        "screenshots": [
+          "catalog/content/templates/business-dashboard/cover.svg"
+        ],
+        "data_required": [
+          "销售明细",
+          "回款明细",
+          "库存快照"
+        ]
+      },
+      "same_as": {
+        "prompt": "用【经销商经营看板】案例的做法，基于我上传的销售、回款和库存表，生成同款单文件 HTML 看板：顶部四个核心指标（出货额、回款率、毛利率、库存周转），中部区域与品类对比，底部问题与行动项；所有金额注明口径和来源。",
+        "inputs": [
+          {
+            "name": "sales",
+            "type": "xlsx",
+            "required": true,
+            "example": "sales_2026Q3.xlsx"
+          },
+          {
+            "name": "receivables",
+            "type": "xlsx",
+            "required": true,
+            "example": "receivables_2026Q3.xlsx"
+          },
+          {
+            "name": "inventory",
+            "type": "xlsx",
+            "required": false,
+            "example": "inventory_2026Q3.xlsx"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "dashboard",
+            "type": "html"
+          }
+        ],
+        "dependent_assets": [
+          {
+            "asset_id": "mdl.skill.business-ops-analysis",
+            "version": "1.0.0",
+            "role": "skill",
+            "optional": false
+          },
+          {
+            "asset_id": "mdl.skill.html-report",
+            "version": "1.0.0",
+            "role": "skill",
+            "optional": false
+          }
+        ],
+        "steps": [
+          "安装两个依赖技能",
+          "上传三张底表",
+          "粘贴提示词",
+          "按提示补充口径"
+        ]
+      },
+      "provenance": {
+        "produced_by_asset_id": "mdl.skill.business-ops-analysis",
+        "produced_by_version": "1.0.0",
+        "generated_at": "2026-11-07T00:00:00Z"
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [
+        {
+          "path": "catalog/content/templates/business-dashboard/README.md",
+          "size": 790,
+          "sha256": "4ac3483562ef9509aa07d5ccc93f86bbd324bad0f820692a2171c946d0d62585"
+        },
+        {
+          "path": "catalog/content/templates/business-dashboard/cover.svg",
+          "size": 3690,
+          "sha256": "6604b2863e4d4a4316e1735528de40b365405a9b70887440927ef3b6787fedf5"
+        },
+        {
+          "path": "catalog/content/templates/business-dashboard/preview.html",
+          "size": 4261,
+          "sha256": "7c7332b65bd04ef51e0d3a608390196ca1cc5bb31cae500103efe4ff3537bcd6"
+        },
+        {
+          "path": "catalog/content/templates/business-dashboard/prompt.md",
+          "size": 651,
+          "sha256": "3fa9c2eaca8a6c96a59be1ab14fb802c70e064f33d71404991a54bfee34258b8"
+        }
+      ],
+      "digest": "d9b8995a066dcced47ecf45f5e30f9112340a725bc2b236d01ea4def37661f9f",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": "catalog/content/templates/business-dashboard",
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    },
+    {
+      "schema_version": "asset-record/3.0",
+      "kind": "asset",
+      "asset_id": "mdl.platform-extension.market-entry",
+      "slug": "market-entry",
+      "version": "1.0.0",
+      "name": {
+        "zh": "市场入口开关",
+        "en": "Market Entry Toggle"
+      },
+      "summary": {
+        "zh": "在宿主设置页显示或隐藏插件市场入口，不改任何资产包。",
+        "en": "Show or hide the plugin market entry in the host settings page without touching any asset package."
+      },
+      "description": {
+        "zh": "平台扩展功能示例：开关式资产，不下载包、不写资产目录，只改写宿主配置键 market.entry.enabled。用于验证 capabilities.install.modes 含 toggle 时的客户端行为。",
+        "en": "A platform extension example: a toggle asset that downloads no package and writes no asset directory, only the host config key market.entry.enabled. It verifies client behavior when capabilities.install.modes contains toggle."
+      },
+      "category": {
+        "primary": "platform-extension/market",
+        "labels": [
+          "平台扩展",
+          "开关"
+        ]
+      },
+      "tags": [
+        "平台扩展",
+        "开关",
+        "市场入口"
+      ],
+      "highlights": [
+        "不落包、不改资产目录",
+        "只改写宿主配置键",
+        "可随时关闭"
+      ],
+      "examples": [
+        {
+          "label": "隐藏市场入口",
+          "prompt": "把插件市场入口开关关掉，不要再在设置页显示。"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "企业内隐藏市场",
+          "summary": "由管理员关闭入口，避免员工误装。"
+        }
+      ],
+      "owner": {
+        "org_id": "mdl",
+        "user_id": null
+      },
+      "publisher": {
+        "name": "MDL Plugin Market",
+        "verification": "official"
+      },
+      "visibility": "public",
+      "license": "MIT",
+      "pricing": {
+        "model": "free",
+        "price": null
+      },
+      "scan": {
+        "state": "passed",
+        "checked_at": "2026-11-07T00:00:00Z",
+        "issues": []
+      },
+      "review": {
+        "state": "approved",
+        "reviewer": "mdl-platform",
+        "reviewed_at": "2026-11-07T00:00:00Z",
+        "notes": null
+      },
+      "capabilities": {
+        "install": {
+          "modes": [
+            "toggle"
+          ],
+          "hosts": [
+            "workbuddy"
+          ],
+          "entry": null,
+          "target": null,
+          "source": null,
+          "dependencies": []
+        },
+        "toggle": {
+          "supported": true,
+          "key": "market.entry.enabled",
+          "default": true,
+          "scope": "user"
+        },
+        "exhibit": {
+          "showcase": false,
+          "same_as": false
+        },
+        "runtime": {
+          "client_side": true,
+          "server_side": false
+        }
+      },
+      "scopes": [],
+      "permissions": {
+        "filesystem": "write",
+        "network": false,
+        "shell": false,
+        "credentials": false,
+        "data_scope": []
+      },
+      "secrets_policy": {
+        "allow_hardcoded": false,
+        "source": "none"
+      },
+      "compatibility": {
+        "mdl_core": ">=0.3.0",
+        "hosts": [
+          "workbuddy"
+        ],
+        "min_version": "1.0.0",
+        "runtime": "node>=18"
+      },
+      "metrics": {
+        "downloads": 0,
+        "installs": 0,
+        "rating": null
+      },
+      "updated_at": "2026-11-07T00:00:00Z",
+      "files": [],
+      "digest": "a794fe39c86b53bbda28308b31e3972fa96ec5a730e1c58006a243d593618606",
+      "source": {
+        "repo": "mdl-plugin-market",
+        "commit": "unknown",
+        "path": null,
+        "exported_at": "2026-11-07T00:00:00Z"
+      }
+    }
+  ]
+}
