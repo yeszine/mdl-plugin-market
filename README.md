@@ -191,7 +191,7 @@ node client/installer.mjs uninstall mdl.expert.fmcg-order-advisor --root <沙箱
 | `offline` | `capabilities.runtime.client_side` |
 | `internal-only` | `visibility`（企业内） |
 
-**不变量**：迁移后 `node scripts/build.mjs` 产出的 `index.json` 与旧仓产物**字节一致**（sha256 相同，18 个插件）。
+**构建确定性**：`node scripts/build.mjs` 两次产出字节一致（`npm run check` 会校验）；当前 18 个插件。
 
 ### GitHub Pages URL 会随仓库改名变化
 
@@ -217,7 +217,8 @@ https://<owner>.github.io/mdl-plugin-market/index.json
 - 市场根页面：`https://yeszine.github.io/mdl-plugin-market/`
 - Pages 配置：`main` 分支 / `/(root)`，Deploy from a branch（`build_type=legacy`）。
 - 线上验证结果：
-  - 线上 `index.json` 与本地逐字节一致，sha256 `62ACC9CF5DAC9EA926E9CF02F498FC169DDC3E324F105738B66C0C4F6E67B048`
+  - 线上 `index.json` 与本地逐字节一致，sha256 `62ACC9CF5DAC9EA926E9CF02F498FC169DDC3E324F105738B66C0C4F6E67B048`（安装源修复前的发布态）
+  - 修复 `@dsh-fmcg/*` 安装源后的本地 sha256 为 `C681DECBE134B8487B677D961259E520378DD79CAD02463DFCAFD4BC791DDCEC`，推送后线上会同步为此值
   - `format=1`，`plugins=18`
   - 根页面返回 200
 

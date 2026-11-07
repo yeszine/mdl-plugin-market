@@ -444,10 +444,10 @@
       "en": "Skill: distill management insight from business data — trend judgment, structural breakdown, anomaly detection, periodic operations reports.",
       "zh": "技能：从业务数据中提炼经营洞察——趋势判断、结构拆解、异常识别，合成周期性经营汇报。"
     },
-    "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+    "homepage": "https://github.com/yeszine/mdl-plugin-market",
     "repository": {
-      "url": "https://github.com/yeszine/dsh-fmcg-index",
-      "directory": "bundles/business-ops-analysis"
+      "url": "https://github.com/yeszine/mdl-plugin-market",
+      "directory": "bundles/dsh-fmcg-business-ops-analysis"
     },
     "metadata": {
       "category": "reporting",
@@ -473,8 +473,8 @@
         "publishTimestamp": 1792948582,
         "source": {
           "type": "git",
-          "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+          "url": "https://github.com/yeszine/mdl-plugin-market.git",
+          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
           "path": "bundles/dsh-fmcg-business-ops-analysis"
         },
         "engines": {
@@ -493,10 +493,10 @@
       "en": "Skill: deep retrieval and analysis on complex topics — tiered source credibility, cross-validation, citation discipline, structured research reports.",
       "zh": "技能：复杂主题的深度检索与分析——来源可信度分层、交叉验证、引用留痕、结构化研究报告。"
     },
-    "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+    "homepage": "https://github.com/yeszine/mdl-plugin-market",
     "repository": {
-      "url": "https://github.com/yeszine/dsh-fmcg-index",
-      "directory": "bundles/deep-research-assistant"
+      "url": "https://github.com/yeszine/mdl-plugin-market",
+      "directory": "bundles/dsh-fmcg-deep-research-assistant"
     },
     "metadata": {
       "category": "knowledge",
@@ -521,8 +521,8 @@
         "publishTimestamp": 1792948582,
         "source": {
           "type": "git",
-          "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+          "url": "https://github.com/yeszine/mdl-plugin-market.git",
+          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
           "path": "bundles/dsh-fmcg-deep-research-assistant"
         },
         "engines": {
@@ -541,10 +541,10 @@
       "en": "Skills: self-contained single-file HTML deliverables — visually designed reports/dashboards (html-report) and animation-rich slide decks (html-deck).",
       "zh": "技能：自包含单文件 HTML 交付物——视觉化报告/仪表盘（html-report）与动画演示幻灯片（html-deck）。"
     },
-    "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+    "homepage": "https://github.com/yeszine/mdl-plugin-market",
     "repository": {
-      "url": "https://github.com/yeszine/dsh-fmcg-index",
-      "directory": "bundles/html-report-presentation"
+      "url": "https://github.com/yeszine/mdl-plugin-market",
+      "directory": "bundles/dsh-fmcg-html-report-presentation"
     },
     "metadata": {
       "category": "reporting",
@@ -569,8 +569,8 @@
         "publishTimestamp": 1792948582,
         "source": {
           "type": "git",
-          "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+          "url": "https://github.com/yeszine/mdl-plugin-market.git",
+          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
           "path": "bundles/dsh-fmcg-html-report-presentation"
         },
         "engines": {
@@ -589,10 +589,10 @@
       "en": "Skills: Excel read/write with formulas and charts (xlsx), Word documents with revisions (docx), PDF extract/merge/forms (pdf), PowerPoint decks (pptx).",
       "zh": "技能集：Excel 读写/公式/图表（xlsx）、Word 文档与修订（docx）、PDF 提取/合并/表单（pdf）、PPT 演示文稿（pptx）。"
     },
-    "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+    "homepage": "https://github.com/yeszine/mdl-plugin-market",
     "repository": {
-      "url": "https://github.com/yeszine/dsh-fmcg-index",
-      "directory": "bundles/office-plugin"
+      "url": "https://github.com/yeszine/mdl-plugin-market",
+      "directory": "bundles/dsh-fmcg-office-plugin"
     },
     "metadata": {
       "category": "documents",
@@ -622,8 +622,8 @@
         "publishTimestamp": 1792948583,
         "source": {
           "type": "git",
-          "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+          "url": "https://github.com/yeszine/mdl-plugin-market.git",
+          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
           "path": "bundles/dsh-fmcg-office-plugin"
         },
         "engines": {
@@ -642,10 +642,10 @@
       "en": "Skill: turn scattered product ideas into reviewable, deliverable PRDs — standard structure, gap-filling questions, review checklist, prototype-first mode.",
       "zh": "技能：把零散产品想法整理为可评审、可交付的 PRD——标准结构、补全提问、评审自查、原型优先模式。"
     },
-    "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+    "homepage": "https://github.com/yeszine/mdl-plugin-market",
     "repository": {
-      "url": "https://github.com/yeszine/dsh-fmcg-index",
-      "directory": "bundles/prd-authoring"
+      "url": "https://github.com/yeszine/mdl-plugin-market",
+      "directory": "bundles/dsh-fmcg-prd-authoring"
     },
     "metadata": {
       "category": "knowledge",
@@ -669,8 +669,8 @@
         "publishTimestamp": 1792948583,
         "source": {
           "type": "git",
-          "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+          "url": "https://github.com/yeszine/mdl-plugin-market.git",
+          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
           "path": "bundles/dsh-fmcg-prd-authoring"
         },
         "engines": {
@@ -689,10 +689,10 @@
       "en": "Skill: host-agnostic guidelines for inline visual answers — compact self-contained HTML/SVG diagrams, charts, comparisons and small interactive demos next to text.",
       "zh": "技能：宿主无关的内联可视化回答规范——在文字回答旁用自包含 HTML/SVG 片段展示示意图、图表、对比与小型交互 demo。"
     },
-    "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+    "homepage": "https://github.com/yeszine/mdl-plugin-market",
     "repository": {
-      "url": "https://github.com/yeszine/dsh-fmcg-index",
-      "directory": "bundles/dynamic-ui"
+      "url": "https://github.com/yeszine/mdl-plugin-market",
+      "directory": "bundles/dsh-fmcg-dynamic-ui"
     },
     "metadata": {
       "category": "tools",
@@ -716,8 +716,8 @@
         "publishTimestamp": 1792948582,
         "source": {
           "type": "git",
-          "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+          "url": "https://github.com/yeszine/mdl-plugin-market.git",
+          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
           "path": "bundles/dsh-fmcg-dynamic-ui"
         },
         "engines": {
@@ -736,10 +736,10 @@
       "en": "Skill: deploy frontend, full-stack and AI agent projects to IGA Pages — Pages Functions, env vars, logs, @iga-pages/agent and @iga-pages/blob SDKs.",
       "zh": "技能：把前端/全栈/AI agent 项目部署到 IGA Pages——Pages Functions、环境变量、日志、@iga-pages/agent 与 @iga-pages/blob SDK。"
     },
-    "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+    "homepage": "https://github.com/yeszine/mdl-plugin-market",
     "repository": {
-      "url": "https://github.com/yeszine/dsh-fmcg-index",
-      "directory": "bundles/iga-pages"
+      "url": "https://github.com/yeszine/mdl-plugin-market",
+      "directory": "bundles/dsh-fmcg-iga-pages"
     },
     "metadata": {
       "category": "tools",
@@ -765,8 +765,8 @@
         "publishTimestamp": 1792948583,
         "source": {
           "type": "git",
-          "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+          "url": "https://github.com/yeszine/mdl-plugin-market.git",
+          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
           "path": "bundles/dsh-fmcg-iga-pages"
         },
         "engines": {
@@ -785,10 +785,10 @@
       "en": "Skill: host-agnostic recurring automation — cron syntax, task design (deliverables, idempotency, failure alerts), landing on Windows Task Scheduler, crontab, GitHub Actions or agent hosts.",
       "zh": "技能：宿主无关的周期自动化规范——cron 语法、任务设计（产出物/幂等/失败通知），落地到 Windows 任务计划、crontab、GitHub Actions 或 agent 宿主。"
     },
-    "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+    "homepage": "https://github.com/yeszine/mdl-plugin-market",
     "repository": {
-      "url": "https://github.com/yeszine/dsh-fmcg-index",
-      "directory": "bundles/schedule"
+      "url": "https://github.com/yeszine/mdl-plugin-market",
+      "directory": "bundles/dsh-fmcg-schedule"
     },
     "metadata": {
       "category": "tools",
@@ -813,8 +813,8 @@
         "publishTimestamp": 1792948584,
         "source": {
           "type": "git",
-          "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+          "url": "https://github.com/yeszine/mdl-plugin-market.git",
+          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
           "path": "bundles/dsh-fmcg-schedule"
         },
         "engines": {
