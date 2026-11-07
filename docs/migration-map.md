@@ -129,13 +129,41 @@
 
 ---
 
-## 9. 旧仓库删除前置条件（摘要）
+## 9. 旧仓库归档与删除状态（2026-11-07）
 
-完整清单与顺序在最终上报中给出。最低门槛：
+### 9.1 远端与发布
 
-1. 新仓 `npm run check` 与 `npm run verify` 全部通过（当前 19/19）。
-2. 新仓 `index.json` 与旧仓产物字节一致（当前一致）。
-3. 新仓能独立起服务、导出、安装、卸载、上传审核下载安装闭环。
-4. 旧仓工作区没有未提交改动；若有，先归档提交或打 tag。
-5. 旧仓的独特内容（阶段文档、未迁入脚本）确认已无引用价值，或已归档到新仓之外。
-6. 删除顺序：先删除 `ai-asset-hub` 的远端/本地副本需用户确认；再删除 `dsh-fmcg-index` 的 `workbuddy-market/`；最后处理仓库本体与 GitHub Pages/远端配置。
+- 新仓远端：`git@github.com:yeszine/mdl-plugin-market.git`，`main` 已推送。
+- GitHub Pages：**未启用**。仓库为 private，Pages API 返回 `422 Your current plan does not support GitHub Pages for this repository.`；线上 `https://yeszine.github.io/mdl-plugin-market/index.json` 暂不可用。
+- 启用方式与前提见 `README.md` 的「当前发布状态」与「启用 Pages 的精确操作」。
+
+### 9.2 归档
+
+归档目录 `D:\GitHub\_archive\`，不在任何 git 仓库内：
+
+| 仓库 | bundle | 整目录 zip | 分支 | HEAD |
+|---|---|---|---|---|
+| `dsh-fmcg-index` | `dsh-fmcg-index-20261107.bundle` | `dsh-fmcg-index-20261107.zip` | `feat/merge-asset-hub` | `8ca0d3b994b1cbce0134b2de4e1e3c02cf24bb1a` |
+| `ai-asset-hub` | `ai-asset-hub-20261107.bundle` | `ai-asset-hub-20261107.zip` | `main` | `c8e1955a41f3447869e42fce6bac45075340d9ca` |
+
+- 两份 bundle 均通过 `git bundle verify`；zip 含 `.git`、排除 `node_modules`，可正常枚举。
+- 时间、sha256、条目数与恢复命令见 `D:\GitHub\_archive\ARCHIVE-MANIFEST.md`。
+
+### 9.3 删除状态
+
+| 仓库 | 状态 | 说明 |
+|---|---|---|
+| `ai-asset-hub` | **本地目录已删除** | 归档校验通过后删除；GitHub 远端未动 |
+| `dsh-fmcg-index` | **保留** | 当前会话工作目录，不能在本会话删除；确切命令见 `D:\GitHub\_archive\DELETE-dsh-fmcg-index.md` |
+
+`dsh-fmcg-index` 删除前必须确认：
+
+1. 新索引源 `https://yeszine.github.io/mdl-plugin-market/index.json` 返回 200，且与本地 `index.json` 哈希一致（当前未满足，Pages 未启用）。
+2. 归档 bundle / zip 可读（当前已满足）。
+3. 工作区干净（归档时 0 个未提交改动）。
+
+### 9.4 删除本地目录的边界
+
+- 删除本地目录**不会**删除 GitHub 上的仓库和 Pages。
+- 旧的 `https://yeszine.github.io/dsh-fmcg-index/index.json` 会继续可访问，直到在 GitHub 上删除旧仓库或关闭 Pages。
+- 本会话不会改动 GitHub 上的旧仓库。

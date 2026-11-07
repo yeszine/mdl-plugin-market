@@ -209,13 +209,44 @@ https://<owner>.github.io/mdl-plugin-market/index.json
 
 本仓 `scripts/build.mjs` 的默认 `--index-url` 已改为 `https://yeszine.github.io/mdl-plugin-market/index.json`。该地址只用于构建时的格式校验，不会写进 `index.json`。
 
-**需要你做的事：**
+#### 当前发布状态（2026-11-07）
 
-1. 在新仓库的 Settings → Pages 中重新启用 Pages（源分支与目录保持与旧仓一致）。
-2. 若使用自定义域名，更新 DNS / CNAME 到新地址。
-3. 更新所有消费方（DSH 客户端配置、文档、书签、外部引用）中的索引 URL。
-4. 如果新 URL 与默认值不同，构建时显式传 `--index-url <你的地址>`。
-5. 旧仓库删除后旧 URL 会失效；删除前确认没有外部系统仍指向旧地址。
+- 远端：`git@github.com:yeszine/mdl-plugin-market.git`，`main` 已推送。
+- **GitHub Pages 尚未启用**。调用 Pages API 返回：
+
+  ```text
+  422 Your current plan does not support GitHub Pages for this repository.
+  ```
+
+  原因是仓库当前为 **private**，账号计划不支持 private 仓库的 GitHub Pages。线上索引 URL 目前返回 404，不能作为已发布源使用。
+
+#### 启用 Pages 的精确操作
+
+先二选一满足前提：
+
+- **方案 A（免费）**：把仓库改为公开。打开 `https://github.com/yeszine/mdl-plugin-market/settings` → 页面底部 **Danger Zone** → **Change repository visibility** → **Change to public**，按提示确认。
+- **方案 B（付费）**：升级到支持 private 仓库 Pages 的 GitHub 计划（Pro / Team / Enterprise）。
+
+然后开启 Pages：
+
+1. 打开 `https://github.com/yeszine/mdl-plugin-market/settings/pages`。
+2. **Build and deployment** → **Source** 选择 **Deploy from a branch**。
+3. **Branch** 选择 `main`，目录选择 `/(root)`，点击 **Save**。
+4. 等待 1–3 分钟；首次发布可能更久，但不超过 10 分钟。
+5. 验证：
+
+   ```powershell
+   (Invoke-WebRequest -UseBasicParsing 'https://yeszine.github.io/mdl-plugin-market/index.json').StatusCode
+   (Get-FileHash 'index.json' -Algorithm SHA256).Hash
+   # 与线上内容逐字节比对后，应一致；format=1，plugins=18
+   ```
+
+其他需要做的事：
+
+- 若使用自定义域名，更新 DNS / CNAME 到新地址。
+- 更新所有消费方（DSH 客户端配置、文档、书签、外部引用）中的索引 URL。
+- 如果新 URL 与默认值不同，构建时显式传 `--index-url <你的地址>`。
+- 删除旧仓库后旧 URL 会失效；删除前确认没有外部系统仍指向旧地址。
 
 ---
 
@@ -253,4 +284,15 @@ npm run verify
 
 ## 9. 迁移与旧仓库
 
-本仓由 `dsh-fmcg-index` 与 `ai-asset-hub` 的能力抽取重建，**不携带旧仓库 git 历史**。逐项来源与改造见 [migration-map.md](docs/migration-map.md)。旧仓库本轮只读；删除前置条件与顺序见该文第 9 节及最终上报。
+本仓由 `dsh-fmcg-index` 与 `ai-asset-hub` 的能力抽取重建，**不携带旧仓库 git 历史**。逐项来源与改造见 [migration-map.md](docs/migration-map.md)。
+
+旧仓库处置状态（2026-11-07）：
+
+| 仓库 | 本地目录 | 归档 | 状态 |
+|---|---|---|---|
+| `ai-asset-hub` | `ai-asset-hub/`（已删除） | `D:\GitHub\_archive\ai-asset-hub-20261107.{bundle,zip}` | **已删除本地目录**；归档已校验可读；GitHub 远端未动 |
+| `dsh-fmcg-index` | `dsh-fmcg-index/`（保留） | `D:\GitHub\_archive\dsh-fmcg-index-20261107.{bundle,zip}` | **保留**；删除命令见 `D:\GitHub\_archive\DELETE-dsh-fmcg-index.md`；GitHub 远端与旧 Pages 未动 |
+
+- 归档时间、HEAD、分支、sha256 与恢复方式见 `D:\GitHub\_archive\ARCHIVE-MANIFEST.md`。
+- 归档目录不在任何 git 仓库内。
+- 删除本地目录**不会**删除 GitHub 上的仓库或 Pages；旧的 `https://yeszine.github.io/dsh-fmcg-index/index.json` 仍会继续可访问，直到在 GitHub 上删除旧仓库。
