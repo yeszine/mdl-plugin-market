@@ -474,7 +474,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/mdl-plugin-market.git",
-          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
+          "commit": "2e43fb01c33d1ac585409220a840cd92f1d414c5",
           "path": "bundles/dsh-fmcg-business-ops-analysis"
         },
         "engines": {
@@ -522,7 +522,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/mdl-plugin-market.git",
-          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
+          "commit": "2e43fb01c33d1ac585409220a840cd92f1d414c5",
           "path": "bundles/dsh-fmcg-deep-research-assistant"
         },
         "engines": {
@@ -570,7 +570,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/mdl-plugin-market.git",
-          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
+          "commit": "2e43fb01c33d1ac585409220a840cd92f1d414c5",
           "path": "bundles/dsh-fmcg-html-report-presentation"
         },
         "engines": {
@@ -623,7 +623,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/mdl-plugin-market.git",
-          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
+          "commit": "2e43fb01c33d1ac585409220a840cd92f1d414c5",
           "path": "bundles/dsh-fmcg-office-plugin"
         },
         "engines": {
@@ -670,7 +670,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/mdl-plugin-market.git",
-          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
+          "commit": "2e43fb01c33d1ac585409220a840cd92f1d414c5",
           "path": "bundles/dsh-fmcg-prd-authoring"
         },
         "engines": {
@@ -717,7 +717,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/mdl-plugin-market.git",
-          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
+          "commit": "2e43fb01c33d1ac585409220a840cd92f1d414c5",
           "path": "bundles/dsh-fmcg-dynamic-ui"
         },
         "engines": {
@@ -766,7 +766,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/mdl-plugin-market.git",
-          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
+          "commit": "2e43fb01c33d1ac585409220a840cd92f1d414c5",
           "path": "bundles/dsh-fmcg-iga-pages"
         },
         "engines": {
@@ -814,7 +814,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/mdl-plugin-market.git",
-          "commit": "3e36f38b77d97460f7cab9eaee5f506f74ce4f6e",
+          "commit": "2e43fb01c33d1ac585409220a840cd92f1d414c5",
           "path": "bundles/dsh-fmcg-schedule"
         },
         "engines": {

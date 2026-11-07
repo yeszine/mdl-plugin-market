@@ -218,7 +218,7 @@ https://<owner>.github.io/mdl-plugin-market/index.json
 - Pages 配置：`main` 分支 / `/(root)`，Deploy from a branch（`build_type=legacy`）。
 - 线上验证结果：
   - 线上 `index.json` 与本地逐字节一致，sha256 `62ACC9CF5DAC9EA926E9CF02F498FC169DDC3E324F105738B66C0C4F6E67B048`（安装源修复前的发布态）
-  - 修复 `@dsh-fmcg/*` 安装源后的本地 sha256 为 `C681DECBE134B8487B677D961259E520378DD79CAD02463DFCAFD4BC791DDCEC`，推送后线上会同步为此值
+  - 修复 `@dsh-fmcg/*` 安装源后的本地 sha256 为 `2197815CD1D86CB4297BC688190B812D5CAC737302A2BA83943EC567EDAC6688`，推送后线上会同步为此值
   - `format=1`，`plugins=18`
   - 根页面返回 200
 

@@ -138,7 +138,7 @@
   - 线上索引：`https://yeszine.github.io/mdl-plugin-market/index.json`
   - 根页面：`https://yeszine.github.io/mdl-plugin-market/`（200）
   - 配置：`main` / `/(root)`，Deploy from a branch（`build_type=legacy`）
-  - 验证：线上 `index.json` 与本地逐字节一致，sha256 `62ACC9CF5DAC9EA926E9CF02F498FC169DDC3E324F105738B66C0C4F6E67B048`（安装源修复前的发布态）；修复 `@dsh-fmcg/*` 安装源后本地为 `C681DECBE134B8487B677D961259E520378DD79CAD02463DFCAFD4BC791DDCEC`，待推送；`format=1`；`plugins=18`
+  - 验证：线上 `index.json` 与本地逐字节一致，sha256 `62ACC9CF5DAC9EA926E9CF02F498FC169DDC3E324F105738B66C0C4F6E67B048`（安装源修复前的发布态）；修复 `@dsh-fmcg/*` 安装源后本地为 `2197815CD1D86CB4297BC688190B812D5CAC737302A2BA83943EC567EDAC6688`，待推送；`format=1`；`plugins=18`
 - 历史阻塞：仓库最初为 private，Pages API 返回 422；改为 public 后 `POST /repos/yeszine/mdl-plugin-market/pages` 创建成功，首次构建 `building → built`。
 - 启用方式与排查步骤见 `README.md` 的「当前发布状态」与「如需重新启用或排查 Pages」。
 
@@ -163,7 +163,7 @@
 
 `dsh-fmcg-index` 删除前必须确认：
 
-1. 新索引源 `https://yeszine.github.io/mdl-plugin-market/index.json` 返回 200，且与本地 `index.json` 哈希一致（**已满足**：2026-11-07 12:57 +08:00，sha256 `62ACC9CF5DAC9EA926E9CF02F498FC169DDC3E324F105738B66C0C4F6E67B048`；修复安装源后本地为 `C681DECBE134B8487B677D961259E520378DD79CAD02463DFCAFD4BC791DDCEC`，待推送）。
+1. 新索引源 `https://yeszine.github.io/mdl-plugin-market/index.json` 返回 200，且与本地 `index.json` 哈希一致（**已满足**：2026-11-07 12:57 +08:00，sha256 `62ACC9CF5DAC9EA926E9CF02F498FC169DDC3E324F105738B66C0C4F6E67B048`；修复安装源后本地为 `2197815CD1D86CB4297BC688190B812D5CAC737302A2BA83943EC567EDAC6688`，待推送）。
 2. 归档 bundle / zip 可读（当前已满足）。
 3. 工作区干净（归档时 0 个未提交改动）。
 
