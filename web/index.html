@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MDL 插件市场</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">M</div>
+    <div>
+      <div class="brand-name">MDL 插件市场</div>
+      <div class="brand-sub">技能 · 专家 · 专家团 · 连接器 · 模板案例 · 平台扩展</div>
+    </div>
+  </div>
+  <div class="search">
+    <input id="search" type="search" placeholder="搜索资产、标签或使用场景" autocomplete="off">
+  </div>
+  <div class="top-actions">
+    <span id="lock-badge" class="badge" title="真实根目录默认只读">沙箱</span>
+    <button id="login-btn" class="btn ghost" type="button">登录</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav id="category-tree" aria-label="资产分类"></nav>
+    <div class="sidebar-note">
+      <strong>单入口</strong>
+      <p>分类只用于展示与筛选，不影响审核、权限与安装。安装行为由能力位 <code>install.modes</code> 决定。</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="tabs" role="tablist">
+      <button id="tab-discover" class="tab active" role="tab" aria-selected="true" type="button">发现</button>
+      <button id="tab-installed" class="tab" role="tab" aria-selected="false" type="button">已安装</button>
+      <div class="tabs-meta" id="result-meta"></div>
+    </div>
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <div id="empty" class="empty hidden">
+      <h2>没有匹配的资产</h2>
+      <p>换个分类或关键词试试。</p>
+    </div>
+  </main>
+</div>
+
+<div id="drawer" class="drawer hidden" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+  <div class="drawer-backdrop" data-close="drawer"></div>
+  <article class="drawer-panel">
+    <button class="drawer-close" type="button" data-close="drawer" aria-label="关闭">×</button>
+    <div id="drawer-body"></div>
+  </article>
+</div>
+
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-backdrop" data-close="modal"></div>
+  <div class="modal-panel">
+    <button class="modal-close" type="button" data-close="modal" aria-label="关闭">×</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
