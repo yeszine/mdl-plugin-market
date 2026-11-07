@@ -1,0 +1,45 @@
+{
+  "name": "@dsh-fmcg/html-report-presentation",
+  "version": "0.1.0",
+  "description": "Skills for self-contained HTML deliverables: visually designed reports/dashboards and animation-rich slide decks.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "agent-skill",
+    "html",
+    "report",
+    "slides",
+    "presentation"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeszine/dsh-fmcg-html-report-presentation.git"
+  },
+  "homepage": "https://github.com/yeszine/dsh-fmcg-html-report-presentation",
+  "bugs": "https://github.com/yeszine/dsh-fmcg-html-report-presentation/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

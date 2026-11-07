@@ -1,0 +1,46 @@
+{
+  "name": "@dsh-fmcg/office-plugin",
+  "version": "0.1.0",
+  "description": "Office document skills: Excel read/write with formulas and charts, Word documents, PDF extract/merge, PowerPoint decks.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "agent-skill",
+    "excel",
+    "word",
+    "pdf",
+    "powerpoint",
+    "office"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeszine/dsh-fmcg-office-plugin.git"
+  },
+  "homepage": "https://github.com/yeszine/dsh-fmcg-office-plugin",
+  "bugs": "https://github.com/yeszine/dsh-fmcg-office-plugin/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

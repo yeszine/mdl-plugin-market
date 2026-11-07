@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>快消行业插件 · FMCG Industry Plugins</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0;
+      font: 16px/1.7 system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+      background: #f7f6f3;
+      color: #1f2328;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+    h1 { font-size: 30px; line-height: 1.3; margin: 0 0 8px; }
+    .sub { color: #5b6169; margin: 0 0 32px; }
+    section { background: #fff; border: 1px solid #e4e1da; border-radius: 12px; padding: 20px 22px; margin: 0 0 18px; }
+    h2 { font-size: 17px; margin: 0 0 10px; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+    code { background: #f1efe9; padding: 2px 6px; border-radius: 5px; font-size: 14px; }
+    pre { background: #14171a; color: #e8e6e1; padding: 14px 16px; border-radius: 9px; overflow-x: auto; font-size: 13.5px; }
+    a { color: #b45309; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #14161a; color: #e8e6e1; }
+      section { background: #1b1e23; border-color: #2c3138; }
+      code { background: #242830; }
+      .sub { color: #a4abb4; }
+      a { color: #f0a35e; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>快消行业插件</h1>
+  <p class="sub">FMCG Industry Plugins · DeepSeek Harness plugin market index (format 1)</p>
+
+  <section>
+    <h2>索引地址 / Index URL</h2>
+    <pre>https://yeszine.github.io/dsh-fmcg-index/index.json</pre>
+    <p>在 DSH 中打开 <strong>插件 → 发现 → 添加索引源</strong>，粘贴上面的地址即可。</p>
+    <p>Open <strong>Plugins → Discover → Add index source</strong> in DSH and paste the URL above.</p>
+  </section>
+
+  <section>
+    <h2>收录内容 / What's inside</h2>
+    <ul>
+      <li>订单开单、库存临期、门店拜访陈列、促销费用、回款对账、配送路线</li>
+      <li>主数据、报表 BI、单据 OCR、协同审批、业代管理、ERP/WMS/CRM 对接</li>
+      <li>政策话术类技能（skills）、经营分析专家（agent presets）、ERP MCP（mcp bundles）</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>本仓库 / This repo</h2>
+    <p>索引由 <code>data/plugins.json</code> + <code>data/market.json</code> 生成，
+       GitHub Actions 每次推送自动构建、校验并发布到 Pages。</p>
+    <p>收录新插件：<code>node scripts/add.mjs &lt;npm 包名&gt;</code>，把输出粘进清单，提交即可。</p>
+  </section>
+</main>
+</body>
+</html>

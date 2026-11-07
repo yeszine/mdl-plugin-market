@@ -1,0 +1,11 @@
+# schedule skill bundle for DeepSeek Harness.
+# Inserts an isolated filesystem skill provider anchored at this bundle's own
+# skills/ directory, resolved from the Loader baseUrl. Works for both git-source
+# bundles (bundle dir = baseUrl dirname) and npm-installed packages.
+- insert:
+    - id: dsh-fmcg-schedule-skills
+      name: '@deepseek-ai/dsh-skill-filesystem'
+      config:
+        providerName: dsh-fmcg-schedule
+        includeDefaultRoots: false
+        bundledSkillDir: !!js process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:url').fileURLToPath(process.getBuiltinModule('node:path').dirname(baseUrl)), 'skills')

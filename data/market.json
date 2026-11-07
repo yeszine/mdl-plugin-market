@@ -1,0 +1,48 @@
+{
+  "title": {
+    "en": "FMCG Industry Plugins",
+    "zh": "快消行业插件"
+  },
+  "description": {
+    "en": "Curated DeepSeek Harness bundles for FMCG distributors: orders, inventory, store visits, promotions, receivables, reporting, documents, collaboration and ERP integration.",
+    "zh": "面向快消品经销商的 DeepSeek Harness 组合包精选：订单、库存、门店拜访、促销费用、回款对账、报表、单据、协同与 ERP 对接。"
+  },
+  "metadata": {
+    "categories": {
+      "order": { "title": { "en": "Orders", "zh": "订单开单" } },
+      "inventory": { "title": { "en": "Inventory and expiry", "zh": "库存与临期" } },
+      "store-visit": { "title": { "en": "Store visits and display", "zh": "门店拜访与陈列" } },
+      "promotion": { "title": { "en": "Pricing and promotion spend", "zh": "价格促销与费用" } },
+      "receivables": { "title": { "en": "Receivables and reconciliation", "zh": "回款与对账" } },
+      "logistics": { "title": { "en": "Delivery and routing", "zh": "配送与路线" } },
+      "master-data": { "title": { "en": "Master data", "zh": "主数据" } },
+      "reporting": { "title": { "en": "Reporting and BI", "zh": "报表与 BI" } },
+      "documents": { "title": { "en": "Documents and OCR", "zh": "单据与 OCR" } },
+      "collaboration": { "title": { "en": "Collaboration and approvals", "zh": "协同与审批" } },
+      "workforce": { "title": { "en": "Sales force management", "zh": "业代管理" } },
+      "integration": { "title": { "en": "ERP, WMS and CRM", "zh": "系统对接" } },
+      "knowledge": { "title": { "en": "Policies, playbooks and skills", "zh": "政策、话术与技能" } },
+      "tools": { "title": { "en": "General office tools", "zh": "通用办公工具" } },
+      "other": { "title": { "en": "Other", "zh": "其他" } }
+    },
+    "labels": {
+      "fs-read": { "title": { "en": "Reads local files", "zh": "读取本地文件" } },
+      "fs-write": { "title": { "en": "Writes local files", "zh": "写入本地文件" } },
+      "shell": { "title": { "en": "Runs shell commands", "zh": "执行 shell 命令" } },
+      "network": { "title": { "en": "Uses the network", "zh": "访问网络" } },
+      "llm": { "title": { "en": "Calls an LLM", "zh": "调用大模型" } },
+      "credentials": { "title": { "en": "Needs credentials", "zh": "需要凭据" } },
+      "dynamic-code": { "title": { "en": "Runs dynamic code", "zh": "运行动态代码" } },
+      "subagent": { "title": { "en": "Spawns subagents", "zh": "使用子智能体" } },
+      "erp-read": { "title": { "en": "Reads ERP data", "zh": "读取 ERP 数据" } },
+      "erp-write": { "title": { "en": "Writes ERP data", "zh": "写入 ERP 数据" } },
+      "wecom": { "title": { "en": "Uses WeCom or DingTalk", "zh": "对接企微/钉钉" } },
+      "offline": { "title": { "en": "Works offline", "zh": "可离线使用" } },
+      "internal-only": { "title": { "en": "Internal use only", "zh": "仅限内部" } }
+    },
+    "sortKeys": {
+      "priority": { "title": { "en": "Recommended", "zh": "推荐度" }, "order": "desc" },
+      "updated": { "title": { "en": "Recently updated", "zh": "最近更新" }, "order": "desc" }
+    }
+  }
+}

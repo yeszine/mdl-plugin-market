@@ -1,0 +1,11 @@
+﻿# office-plugin skill bundle for DeepSeek Harness.
+# Inserts an isolated filesystem skill provider anchored at this package's own
+# skills/ directory, resolved from the DSH profile (Loader baseUrl) — never as a
+# path concatenated onto baseUrl.
+- insert:
+    - id: dsh-fmcg-office-plugin-skills
+      name: '@deepseek-ai/dsh-skill-filesystem'
+      config:
+        providerName: dsh-fmcg-office-plugin
+        includeDefaultRoots: false
+        bundledSkillDir: !!js process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:url').fileURLToPath(process.getBuiltinModule('node:path').dirname(baseUrl)), 'skills')

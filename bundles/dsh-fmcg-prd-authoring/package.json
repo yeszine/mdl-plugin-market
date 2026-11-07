@@ -1,0 +1,44 @@
+{
+  "name": "@dsh-fmcg/prd-authoring",
+  "version": "0.1.0",
+  "description": "PRD authoring skill: turn scattered product ideas into reviewable, deliverable requirement documents.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "agent-skill",
+    "prd",
+    "product",
+    "requirements"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeszine/dsh-fmcg-prd-authoring.git"
+  },
+  "homepage": "https://github.com/yeszine/dsh-fmcg-prd-authoring",
+  "bugs": "https://github.com/yeszine/dsh-fmcg-prd-authoring/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

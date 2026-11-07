@@ -1,0 +1,44 @@
+{
+  "name": "@dsh-fmcg/deep-research-assistant",
+  "version": "0.1.0",
+  "description": "Deep research skill: source-tiered retrieval, cross-validation and structured research reports on complex topics.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "agent-skill",
+    "research",
+    "analysis",
+    "report"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeszine/dsh-fmcg-deep-research-assistant.git"
+  },
+  "homepage": "https://github.com/yeszine/dsh-fmcg-deep-research-assistant",
+  "bugs": "https://github.com/yeszine/dsh-fmcg-deep-research-assistant/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

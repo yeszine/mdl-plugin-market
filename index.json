@@ -1,0 +1,1071 @@
+{
+  "format": 1,
+  "title": {
+    "en": "FMCG Industry Plugins",
+    "zh": "快消行业插件"
+  },
+  "description": {
+    "en": "Curated DeepSeek Harness bundles for FMCG distributors: orders, inventory, store visits, promotions, receivables, reporting, documents, collaboration and ERP integration.",
+    "zh": "面向快消品经销商的 DeepSeek Harness 组合包精选：订单、库存、门店拜访、促销费用、回款对账、报表、单据、协同与 ERP 对接。"
+  },
+  "metadata": {
+    "categories": {
+      "order": {
+        "title": {
+          "en": "Orders",
+          "zh": "订单开单"
+        }
+      },
+      "inventory": {
+        "title": {
+          "en": "Inventory and expiry",
+          "zh": "库存与临期"
+        }
+      },
+      "store-visit": {
+        "title": {
+          "en": "Store visits and display",
+          "zh": "门店拜访与陈列"
+        }
+      },
+      "promotion": {
+        "title": {
+          "en": "Pricing and promotion spend",
+          "zh": "价格促销与费用"
+        }
+      },
+      "receivables": {
+        "title": {
+          "en": "Receivables and reconciliation",
+          "zh": "回款与对账"
+        }
+      },
+      "logistics": {
+        "title": {
+          "en": "Delivery and routing",
+          "zh": "配送与路线"
+        }
+      },
+      "master-data": {
+        "title": {
+          "en": "Master data",
+          "zh": "主数据"
+        }
+      },
+      "reporting": {
+        "title": {
+          "en": "Reporting and BI",
+          "zh": "报表与 BI"
+        }
+      },
+      "documents": {
+        "title": {
+          "en": "Documents and OCR",
+          "zh": "单据与 OCR"
+        }
+      },
+      "collaboration": {
+        "title": {
+          "en": "Collaboration and approvals",
+          "zh": "协同与审批"
+        }
+      },
+      "workforce": {
+        "title": {
+          "en": "Sales force management",
+          "zh": "业代管理"
+        }
+      },
+      "integration": {
+        "title": {
+          "en": "ERP, WMS and CRM",
+          "zh": "系统对接"
+        }
+      },
+      "knowledge": {
+        "title": {
+          "en": "Policies, playbooks and skills",
+          "zh": "政策、话术与技能"
+        }
+      },
+      "tools": {
+        "title": {
+          "en": "General office tools",
+          "zh": "通用办公工具"
+        }
+      },
+      "other": {
+        "title": {
+          "en": "Other",
+          "zh": "其他"
+        }
+      }
+    },
+    "labels": {
+      "fs-read": {
+        "title": {
+          "en": "Reads local files",
+          "zh": "读取本地文件"
+        }
+      },
+      "fs-write": {
+        "title": {
+          "en": "Writes local files",
+          "zh": "写入本地文件"
+        }
+      },
+      "shell": {
+        "title": {
+          "en": "Runs shell commands",
+          "zh": "执行 shell 命令"
+        }
+      },
+      "network": {
+        "title": {
+          "en": "Uses the network",
+          "zh": "访问网络"
+        }
+      },
+      "llm": {
+        "title": {
+          "en": "Calls an LLM",
+          "zh": "调用大模型"
+        }
+      },
+      "credentials": {
+        "title": {
+          "en": "Needs credentials",
+          "zh": "需要凭据"
+        }
+      },
+      "dynamic-code": {
+        "title": {
+          "en": "Runs dynamic code",
+          "zh": "运行动态代码"
+        }
+      },
+      "subagent": {
+        "title": {
+          "en": "Spawns subagents",
+          "zh": "使用子智能体"
+        }
+      },
+      "erp-read": {
+        "title": {
+          "en": "Reads ERP data",
+          "zh": "读取 ERP 数据"
+        }
+      },
+      "erp-write": {
+        "title": {
+          "en": "Writes ERP data",
+          "zh": "写入 ERP 数据"
+        }
+      },
+      "wecom": {
+        "title": {
+          "en": "Uses WeCom or DingTalk",
+          "zh": "对接企微/钉钉"
+        }
+      },
+      "offline": {
+        "title": {
+          "en": "Works offline",
+          "zh": "可离线使用"
+        }
+      },
+      "internal-only": {
+        "title": {
+          "en": "Internal use only",
+          "zh": "仅限内部"
+        }
+      }
+    },
+    "sortKeys": {
+      "priority": {
+        "title": {
+          "en": "Recommended",
+          "zh": "推荐度"
+        },
+        "order": "desc"
+      },
+      "updated": {
+        "title": {
+          "en": "Recently updated",
+          "zh": "最近更新"
+        },
+        "order": "desc"
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-plugin-scout",
+      "title": {
+        "en": "Plugin Scout",
+        "zh": "插件侦察"
+      },
+      "description": {
+        "en": "Discover and verify DeepSeek Harness plugins from GitHub topic dsh-plugin, with trust scores and one-click install through the official installer.",
+        "zh": "从 GitHub topic dsh-plugin 中发现并验证 DSH 插件，带可信度评分，并通过官方安装器一键安装。"
+      },
+      "homepage": "https://github.com/fegnze/dsh-plugin-scout",
+      "repository": {
+        "url": "https://github.com/fegnze/dsh-plugin-scout"
+      },
+      "metadata": {
+        "category": "tools",
+        "labels": [
+          "network",
+          "llm"
+        ],
+        "keywords": [
+          "plugin",
+          "discovery",
+          "search",
+          "trust"
+        ],
+        "sortKeys": {
+          "priority": 30,
+          "updated": 1792652619
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.11",
+          "publishTimestamp": 1792652619,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0"
+          }
+        },
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1792069214,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-quick-ask",
+      "title": {
+        "en": "Side Quick Ask",
+        "zh": "侧边快速提问"
+      },
+      "description": {
+        "en": "Ask small questions about the current topic in a floating side panel, answered by an independent lightweight session that never touches the main conversation.",
+        "zh": "在浮动侧边栏中就当前话题快速提问，由独立轻量会话回答，不写入也不影响主对话。"
+      },
+      "homepage": "https://github.com/Volta-ln/dsh-quick-ask",
+      "repository": {
+        "url": "https://github.com/Volta-ln/dsh-quick-ask"
+      },
+      "metadata": {
+        "category": "collaboration",
+        "labels": [
+          "llm",
+          "network"
+        ],
+        "keywords": [
+          "chat",
+          "side panel",
+          "quick question"
+        ],
+        "sortKeys": {
+          "priority": 20,
+          "updated": 1789281287
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.1",
+          "publishTimestamp": 1789281287,
+          "source": {
+            "type": "npm"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-netcafe",
+      "title": {
+        "en": "Invoice & Ledger Reconciliation",
+        "zh": "发票对账工具"
+      },
+      "description": {
+        "en": "Hosted MCP tools: invoice and bank-statement extraction with in-code arithmetic checks and integer-cent reconciliation, plus PDF/table conversion and SQL dialect translation.",
+        "zh": "托管 MCP 工具：发票与银行流水提取，代码内算术校验、按整数分对账，附 PDF 与表格转换、SQL 方言转写。"
+      },
+      "homepage": "https://github.com/mario03690/dsh-netcafe",
+      "repository": {
+        "url": "https://github.com/mario03690/dsh-netcafe"
+      },
+      "metadata": {
+        "category": "receivables",
+        "labels": [
+          "network",
+          "shell"
+        ],
+        "keywords": [
+          "invoice",
+          "reconciliation",
+          "bank statement",
+          "pdf",
+          "对账",
+          "发票",
+          "流水"
+        ],
+        "sortKeys": {
+          "priority": 70,
+          "updated": 1787368563
+        }
+      },
+      "versions": [
+        {
+          "version": "0.3.1",
+          "publishTimestamp": 1787368563,
+          "source": {
+            "type": "npm"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-invoice-tools",
+      "title": {
+        "en": "VAT Invoice Parser",
+        "zh": "电子发票解析报销"
+      },
+      "description": {
+        "en": "Parse Chinese VAT e-invoice PDFs into structured JSON with amount cross-checks, and aggregate multiple invoices into expense reports (Markdown/xlsx).",
+        "zh": "解析增值税电子发票 PDF（XML 附件优先、文本层兜底）为结构化 JSON，金额勾稽校验，多张汇总生成报销单（Markdown/xlsx）。"
+      },
+      "homepage": "https://github.com/988hj7tczd-oss/dsh-invoice-tools",
+      "repository": {
+        "url": "https://github.com/988hj7tczd-oss/dsh-invoice-tools"
+      },
+      "metadata": {
+        "category": "documents",
+        "labels": [
+          "fs-read",
+          "fs-write",
+          "shell"
+        ],
+        "keywords": [
+          "invoice",
+          "vat",
+          "fapiao",
+          "发票",
+          "报销"
+        ],
+        "sortKeys": {
+          "priority": 75,
+          "updated": 1787577924
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.1",
+          "publishTimestamp": 1787577924,
+          "source": {
+            "type": "npm"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-office-tools",
+      "title": {
+        "en": "Office Document Tools",
+        "zh": "Office 文档工具"
+      },
+      "description": {
+        "en": "Workspace-safe Office tools: create/read Word, create/read/update Excel, create/read PowerPoint, with image layout support.",
+        "zh": "工作区安全的 Office 工具集：创建/读取 Word、创建/读取/更新 Excel、创建/读取 PowerPoint，支持图片排版。"
+      },
+      "homepage": "https://github.com/kw78/dsh-office-tools",
+      "repository": {
+        "url": "https://github.com/kw78/dsh-office-tools"
+      },
+      "metadata": {
+        "category": "documents",
+        "labels": [
+          "fs-read",
+          "fs-write",
+          "shell"
+        ],
+        "keywords": [
+          "excel",
+          "word",
+          "powerpoint",
+          "office",
+          "表格",
+          "报表"
+        ],
+        "sortKeys": {
+          "priority": 80,
+          "updated": 1793021609
+        }
+      },
+      "versions": [
+        {
+          "version": "1.0.8",
+          "publishTimestamp": 1793021609,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.1.0-rc.6 || ^0.1.1-rc.0 || ^0.1.2-alpha.0 || ^0.1.5-alpha.0 || ^0.2.0-rc.1 || ^0.2.1-rc.3"
+          }
+        },
+        {
+          "version": "1.0.6",
+          "publishTimestamp": 1791875546,
+          "source": {
+            "type": "npm"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@eqman00003/dsh-office-com",
+      "title": {
+        "en": "Office COM Automation",
+        "zh": "Office COM 操控"
+      },
+      "description": {
+        "en": "Drive live Excel/Word via COM: VBA macros, pivot tables, live recalculation, deep formatting, with accounting scenarios (double-entry, balance checks, SUMIF ledgers).",
+        "zh": "COM 驱动运行中的 Excel/Word：VBA 宏、透视表、活公式重算、深度排版，含会计场景（复式记账、借贷平衡、SUMIF 科目总账）。"
+      },
+      "homepage": "https://github.com/wly8691-jpg/dsh-office-com",
+      "repository": {
+        "url": "https://github.com/wly8691-jpg/dsh-office-com"
+      },
+      "metadata": {
+        "category": "documents",
+        "labels": [
+          "fs-read",
+          "fs-write",
+          "shell",
+          "dynamic-code"
+        ],
+        "keywords": [
+          "excel",
+          "word",
+          "vba",
+          "pivot",
+          "com",
+          "会计",
+          "记账"
+        ],
+        "sortKeys": {
+          "priority": 65,
+          "updated": 1792936005
+        }
+      },
+      "versions": [
+        {
+          "version": "1.2.2",
+          "publishTimestamp": 1792936005,
+          "source": {
+            "type": "npm"
+          }
+        },
+        {
+          "version": "1.2.1",
+          "publishTimestamp": 1791324150,
+          "source": {
+            "type": "npm"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-data-cleaning-agent",
+      "title": {
+        "en": "Data Cleaning Agent",
+        "zh": "企业名单清洗补全"
+      },
+      "description": {
+        "en": "Clean, dedupe and enrich Excel/CSV/JSON enterprise lists with field completion via QCC MCP, and export results.",
+        "zh": "面向 Excel/CSV/JSON 企业名单：清洗、去重、字段补全与企业数据补全，支持企查查 MCP 与结果导出。"
+      },
+      "homepage": "https://github.com/duhu2000/dsh-data-cleaning-agent",
+      "repository": {
+        "url": "https://github.com/duhu2000/dsh-data-cleaning-agent"
+      },
+      "metadata": {
+        "category": "master-data",
+        "labels": [
+          "fs-read",
+          "fs-write",
+          "network",
+          "shell"
+        ],
+        "keywords": [
+          "excel",
+          "csv",
+          "cleaning",
+          "dedupe",
+          "enrichment",
+          "企查查",
+          "主数据",
+          "名单"
+        ],
+        "sortKeys": {
+          "priority": 70,
+          "updated": 1789695241
+        }
+      },
+      "versions": [
+        {
+          "version": "0.9.17",
+          "publishTimestamp": 1789695241,
+          "source": {
+            "type": "npm"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@xmanrui/dsh-im",
+      "title": {
+        "en": "IM Bot Gateway",
+        "zh": "IM 机器人接入"
+      },
+      "description": {
+        "en": "Connect IM bots via QR code or bot credentials across 9 channels: Feishu, WeChat, DingTalk, WeCom, QQ, Slack, Telegram, Discord, WhatsApp.",
+        "zh": "通过二维码或机器人凭据接入 9 种 IM 渠道（飞书、微信、钉钉、企业微信、QQ、Slack、Telegram、Discord、WhatsApp）。"
+      },
+      "homepage": "https://github.com/xmanrui/dsh-im",
+      "repository": {
+        "url": "https://github.com/xmanrui/dsh-im"
+      },
+      "metadata": {
+        "category": "collaboration",
+        "labels": [
+          "network",
+          "credentials",
+          "wecom"
+        ],
+        "keywords": [
+          "wecom",
+          "dingtalk",
+          "feishu",
+          "wechat",
+          "telegram",
+          "slack",
+          "企业微信",
+          "钉钉",
+          "机器人"
+        ],
+        "sortKeys": {
+          "priority": 75,
+          "updated": 1792806648
+        }
+      },
+      "versions": [
+        {
+          "version": "5.6.0",
+          "publishTimestamp": 1792806648,
+          "source": {
+            "type": "npm"
+          }
+        },
+        {
+          "version": "4.39.0",
+          "publishTimestamp": 1791888334,
+          "source": {
+            "type": "npm"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-plugin-qcc",
+      "title": {
+        "en": "QCC Enterprise Data",
+        "zh": "企查查企业数据"
+      },
+      "description": {
+        "en": "QCC enterprise data source: login, quick search, knowledge base, tool discovery and data fetch across 100+ dimensions (registration, shareholders, litigation, IP).",
+        "zh": "企查查企业数据源：扫码登录认证、企业快搜、知识库检索、工具发现、取数执行 5 个工具，覆盖工商、股东、司法、知识产权等 100+ 数据维度。"
+      },
+      "homepage": "https://github.com/Samge0/dsh-plugin-qcc",
+      "repository": {
+        "url": "https://github.com/Samge0/dsh-plugin-qcc"
+      },
+      "metadata": {
+        "category": "master-data",
+        "labels": [
+          "network",
+          "credentials",
+          "shell"
+        ],
+        "keywords": [
+          "qcc",
+          "企查查",
+          "enterprise",
+          "工商",
+          "股东",
+          "司法"
+        ],
+        "sortKeys": {
+          "priority": 65,
+          "updated": 1788385327
+        }
+      },
+      "versions": [
+        {
+          "version": "2.1.0",
+          "publishTimestamp": 1788385327,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Samge0/dsh-plugin-qcc.git",
+            "commit": "9add16b489ae26c21fdea45f8eb2d61e37951186"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@dsh-fmcg/business-ops-analysis",
+      "title": {
+        "en": "Business Operations Analysis",
+        "zh": "经营分析技能"
+      },
+      "description": {
+        "en": "Skill: distill management insight from business data — trend judgment, structural breakdown, anomaly detection, periodic operations reports.",
+        "zh": "技能：从业务数据中提炼经营洞察——趋势判断、结构拆解、异常识别，合成周期性经营汇报。"
+      },
+      "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+      "repository": {
+        "url": "https://github.com/yeszine/dsh-fmcg-index",
+        "directory": "bundles/business-ops-analysis"
+      },
+      "metadata": {
+        "category": "reporting",
+        "labels": [
+          "llm",
+          "fs-read",
+          "fs-write"
+        ],
+        "keywords": [
+          "经营分析",
+          "报表",
+          "趋势",
+          "business analysis"
+        ],
+        "sortKeys": {
+          "priority": 60,
+          "updated": 1792948582
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792948582,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yeszine/dsh-fmcg-index.git",
+            "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+            "path": "bundles/dsh-fmcg-business-ops-analysis"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@dsh-fmcg/deep-research-assistant",
+      "title": {
+        "en": "Deep Research Assistant",
+        "zh": "深度研究技能"
+      },
+      "description": {
+        "en": "Skill: deep retrieval and analysis on complex topics — tiered source credibility, cross-validation, citation discipline, structured research reports.",
+        "zh": "技能：复杂主题的深度检索与分析——来源可信度分层、交叉验证、引用留痕、结构化研究报告。"
+      },
+      "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+      "repository": {
+        "url": "https://github.com/yeszine/dsh-fmcg-index",
+        "directory": "bundles/deep-research-assistant"
+      },
+      "metadata": {
+        "category": "knowledge",
+        "labels": [
+          "llm",
+          "network"
+        ],
+        "keywords": [
+          "研究",
+          "调研",
+          "竞品",
+          "research"
+        ],
+        "sortKeys": {
+          "priority": 55,
+          "updated": 1792948582
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792948582,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yeszine/dsh-fmcg-index.git",
+            "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+            "path": "bundles/dsh-fmcg-deep-research-assistant"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@dsh-fmcg/html-report-presentation",
+      "title": {
+        "en": "HTML Report & Presentation",
+        "zh": "HTML 报告与演示"
+      },
+      "description": {
+        "en": "Skills: self-contained single-file HTML deliverables — visually designed reports/dashboards (html-report) and animation-rich slide decks (html-deck).",
+        "zh": "技能：自包含单文件 HTML 交付物——视觉化报告/仪表盘（html-report）与动画演示幻灯片（html-deck）。"
+      },
+      "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+      "repository": {
+        "url": "https://github.com/yeszine/dsh-fmcg-index",
+        "directory": "bundles/html-report-presentation"
+      },
+      "metadata": {
+        "category": "reporting",
+        "labels": [
+          "llm",
+          "fs-write"
+        ],
+        "keywords": [
+          "html",
+          "报告",
+          "幻灯片",
+          "dashboard"
+        ],
+        "sortKeys": {
+          "priority": 55,
+          "updated": 1792948582
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792948582,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yeszine/dsh-fmcg-index.git",
+            "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+            "path": "bundles/dsh-fmcg-html-report-presentation"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@dsh-fmcg/office-plugin",
+      "title": {
+        "en": "Office Document Skills",
+        "zh": "Office 文档技能集"
+      },
+      "description": {
+        "en": "Skills: Excel read/write with formulas and charts (xlsx), Word documents with revisions (docx), PDF extract/merge/forms (pdf), PowerPoint decks (pptx).",
+        "zh": "技能集：Excel 读写/公式/图表（xlsx）、Word 文档与修订（docx）、PDF 提取/合并/表单（pdf）、PPT 演示文稿（pptx）。"
+      },
+      "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+      "repository": {
+        "url": "https://github.com/yeszine/dsh-fmcg-index",
+        "directory": "bundles/office-plugin"
+      },
+      "metadata": {
+        "category": "documents",
+        "labels": [
+          "llm",
+          "fs-read",
+          "fs-write",
+          "shell"
+        ],
+        "keywords": [
+          "excel",
+          "word",
+          "pdf",
+          "ppt",
+          "office",
+          "表格",
+          "文档"
+        ],
+        "sortKeys": {
+          "priority": 60,
+          "updated": 1792948583
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792948583,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yeszine/dsh-fmcg-index.git",
+            "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+            "path": "bundles/dsh-fmcg-office-plugin"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@dsh-fmcg/prd-authoring",
+      "title": {
+        "en": "PRD Authoring",
+        "zh": "PRD 撰写技能"
+      },
+      "description": {
+        "en": "Skill: turn scattered product ideas into reviewable, deliverable PRDs — standard structure, gap-filling questions, review checklist, prototype-first mode.",
+        "zh": "技能：把零散产品想法整理为可评审、可交付的 PRD——标准结构、补全提问、评审自查、原型优先模式。"
+      },
+      "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+      "repository": {
+        "url": "https://github.com/yeszine/dsh-fmcg-index",
+        "directory": "bundles/prd-authoring"
+      },
+      "metadata": {
+        "category": "knowledge",
+        "labels": [
+          "llm",
+          "fs-write"
+        ],
+        "keywords": [
+          "prd",
+          "需求文档",
+          "产品"
+        ],
+        "sortKeys": {
+          "priority": 50,
+          "updated": 1792948583
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792948583,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yeszine/dsh-fmcg-index.git",
+            "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+            "path": "bundles/dsh-fmcg-prd-authoring"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@dsh-fmcg/dynamic-ui",
+      "title": {
+        "en": "Inline Visual Answers",
+        "zh": "内联可视化规范"
+      },
+      "description": {
+        "en": "Skill: host-agnostic guidelines for inline visual answers — compact self-contained HTML/SVG diagrams, charts, comparisons and small interactive demos next to text.",
+        "zh": "技能：宿主无关的内联可视化回答规范——在文字回答旁用自包含 HTML/SVG 片段展示示意图、图表、对比与小型交互 demo。"
+      },
+      "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+      "repository": {
+        "url": "https://github.com/yeszine/dsh-fmcg-index",
+        "directory": "bundles/dynamic-ui"
+      },
+      "metadata": {
+        "category": "tools",
+        "labels": [
+          "llm"
+        ],
+        "keywords": [
+          "可视化",
+          "图表",
+          "diagram",
+          "visualization"
+        ],
+        "sortKeys": {
+          "priority": 45,
+          "updated": 1792948582
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792948582,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yeszine/dsh-fmcg-index.git",
+            "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+            "path": "bundles/dsh-fmcg-dynamic-ui"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@dsh-fmcg/iga-pages",
+      "title": {
+        "en": "IGA Pages Deployment",
+        "zh": "IGA Pages 部署技能"
+      },
+      "description": {
+        "en": "Skill: deploy frontend, full-stack and AI agent projects to IGA Pages — Pages Functions, env vars, logs, @iga-pages/agent and @iga-pages/blob SDKs.",
+        "zh": "技能：把前端/全栈/AI agent 项目部署到 IGA Pages——Pages Functions、环境变量、日志、@iga-pages/agent 与 @iga-pages/blob SDK。"
+      },
+      "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+      "repository": {
+        "url": "https://github.com/yeszine/dsh-fmcg-index",
+        "directory": "bundles/iga-pages"
+      },
+      "metadata": {
+        "category": "tools",
+        "labels": [
+          "network",
+          "shell",
+          "credentials"
+        ],
+        "keywords": [
+          "部署",
+          "pages",
+          "hosting",
+          "iga"
+        ],
+        "sortKeys": {
+          "priority": 45,
+          "updated": 1792948583
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792948583,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yeszine/dsh-fmcg-index.git",
+            "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+            "path": "bundles/dsh-fmcg-iga-pages"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@dsh-fmcg/schedule",
+      "title": {
+        "en": "Recurring Automation",
+        "zh": "周期自动化规范"
+      },
+      "description": {
+        "en": "Skill: host-agnostic recurring automation — cron syntax, task design (deliverables, idempotency, failure alerts), landing on Windows Task Scheduler, crontab, GitHub Actions or agent hosts.",
+        "zh": "技能：宿主无关的周期自动化规范——cron 语法、任务设计（产出物/幂等/失败通知），落地到 Windows 任务计划、crontab、GitHub Actions 或 agent 宿主。"
+      },
+      "homepage": "https://github.com/yeszine/dsh-fmcg-index",
+      "repository": {
+        "url": "https://github.com/yeszine/dsh-fmcg-index",
+        "directory": "bundles/schedule"
+      },
+      "metadata": {
+        "category": "tools",
+        "labels": [
+          "llm",
+          "shell"
+        ],
+        "keywords": [
+          "定时",
+          "cron",
+          "自动化",
+          "schedule"
+        ],
+        "sortKeys": {
+          "priority": 45,
+          "updated": 1792948584
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792948584,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yeszine/dsh-fmcg-index.git",
+            "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
+            "path": "bundles/dsh-fmcg-schedule"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-qrcode",
+      "title": {
+        "en": "Barcode & QR Generator",
+        "zh": "条码二维码生成"
+      },
+      "description": {
+        "en": "Generate QR codes (SVG/PNG/ASCII) and barcodes (Code128/EAN-13) fully offline, with no network or shell access.",
+        "zh": "离线生成二维码（SVG/PNG/ASCII）与条码（Code128/EAN-13），无网络、无 shell。"
+      },
+      "homepage": "https://github.com/hellosky983/dsh-qrcode",
+      "repository": {
+        "url": "https://github.com/hellosky983/dsh-qrcode"
+      },
+      "metadata": {
+        "category": "tools",
+        "labels": [
+          "offline"
+        ],
+        "keywords": [
+          "barcode",
+          "ean",
+          "code128",
+          "qr",
+          "条码",
+          "二维码"
+        ],
+        "sortKeys": {
+          "priority": 50,
+          "updated": 1790725325
+        }
+      },
+      "versions": [
+        {
+          "version": "0.2.0",
+          "publishTimestamp": 1790725325,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/hellosky983/dsh-qrcode.git",
+            "commit": "7f420549bb4dfdcc28bd334518e8d404f265bdb4"
+          }
+        }
+      ]
+    }
+  ]
+}
