@@ -209,25 +209,21 @@ https://<owner>.github.io/mdl-plugin-market/index.json
 
 本仓 `scripts/build.mjs` 的默认 `--index-url` 已改为 `https://yeszine.github.io/mdl-plugin-market/index.json`。该地址只用于构建时的格式校验，不会写进 `index.json`。
 
-#### 当前发布状态（2026-11-07）
+#### 当前发布状态（已上线）
 
 - 远端：`git@github.com:yeszine/mdl-plugin-market.git`，`main` 已推送。
-- **GitHub Pages 尚未启用**。调用 Pages API 返回：
+- **GitHub Pages 已启用并发布成功**（2026-11-07 12:57 +08:00 验证）。
+- 线上索引：`https://yeszine.github.io/mdl-plugin-market/index.json`
+- 市场根页面：`https://yeszine.github.io/mdl-plugin-market/`
+- Pages 配置：`main` 分支 / `/(root)`，Deploy from a branch（`build_type=legacy`）。
+- 线上验证结果：
+  - 线上 `index.json` 与本地逐字节一致，sha256 `62ACC9CF5DAC9EA926E9CF02F498FC169DDC3E324F105738B66C0C4F6E67B048`
+  - `format=1`，`plugins=18`
+  - 根页面返回 200
 
-  ```text
-  422 Your current plan does not support GitHub Pages for this repository.
-  ```
+> 历史阻塞记录：仓库最初为 private，Pages API 返回 `422 Your current plan does not support GitHub Pages for this repository.`。改为 public 后，通过 `POST /repos/yeszine/mdl-plugin-market/pages`（`source.branch=main`、`source.path=/`）创建成功；首次构建 `building → built`。
 
-  原因是仓库当前为 **private**，账号计划不支持 private 仓库的 GitHub Pages。线上索引 URL 目前返回 404，不能作为已发布源使用。
-
-#### 启用 Pages 的精确操作
-
-先二选一满足前提：
-
-- **方案 A（免费）**：把仓库改为公开。打开 `https://github.com/yeszine/mdl-plugin-market/settings` → 页面底部 **Danger Zone** → **Change repository visibility** → **Change to public**，按提示确认。
-- **方案 B（付费）**：升级到支持 private 仓库 Pages 的 GitHub 计划（Pro / Team / Enterprise）。
-
-然后开启 Pages：
+#### 如需重新启用或排查 Pages
 
 1. 打开 `https://github.com/yeszine/mdl-plugin-market/settings/pages`。
 2. **Build and deployment** → **Source** 选择 **Deploy from a branch**。

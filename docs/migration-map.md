@@ -134,8 +134,13 @@
 ### 9.1 远端与发布
 
 - 新仓远端：`git@github.com:yeszine/mdl-plugin-market.git`，`main` 已推送。
-- GitHub Pages：**未启用**。仓库为 private，Pages API 返回 `422 Your current plan does not support GitHub Pages for this repository.`；线上 `https://yeszine.github.io/mdl-plugin-market/index.json` 暂不可用。
-- 启用方式与前提见 `README.md` 的「当前发布状态」与「启用 Pages 的精确操作」。
+- GitHub Pages：**已启用并发布成功**（2026-11-07 12:57 +08:00 验证）。
+  - 线上索引：`https://yeszine.github.io/mdl-plugin-market/index.json`
+  - 根页面：`https://yeszine.github.io/mdl-plugin-market/`（200）
+  - 配置：`main` / `/(root)`，Deploy from a branch（`build_type=legacy`）
+  - 验证：线上 `index.json` 与本地逐字节一致，sha256 `62ACC9CF5DAC9EA926E9CF02F498FC169DDC3E324F105738B66C0C4F6E67B048`；`format=1`；`plugins=18`
+- 历史阻塞：仓库最初为 private，Pages API 返回 422；改为 public 后 `POST /repos/yeszine/mdl-plugin-market/pages` 创建成功，首次构建 `building → built`。
+- 启用方式与排查步骤见 `README.md` 的「当前发布状态」与「如需重新启用或排查 Pages」。
 
 ### 9.2 归档
 
@@ -158,7 +163,7 @@
 
 `dsh-fmcg-index` 删除前必须确认：
 
-1. 新索引源 `https://yeszine.github.io/mdl-plugin-market/index.json` 返回 200，且与本地 `index.json` 哈希一致（当前未满足，Pages 未启用）。
+1. 新索引源 `https://yeszine.github.io/mdl-plugin-market/index.json` 返回 200，且与本地 `index.json` 哈希一致（**已满足**：2026-11-07 12:57 +08:00，sha256 `62ACC9CF5DAC9EA926E9CF02F498FC169DDC3E324F105738B66C0C4F6E67B048`）。
 2. 归档 bundle / zip 可读（当前已满足）。
 3. 工作区干净（归档时 0 个未提交改动）。
 
