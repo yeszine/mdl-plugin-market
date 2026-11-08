@@ -38,7 +38,7 @@
 
   <section>
     <h2>索引地址 / Index URL</h2>
-    <pre>https://yeszine.github.io/dsh-fmcg-index/index.json</pre>
+    <pre>https://yeszine.github.io/mdl-plugin-market/index.json</pre>
     <p>在 DSH 中打开 <strong>插件 → 发现 → 添加索引源</strong>，粘贴上面的地址即可。</p>
     <p>Open <strong>Plugins → Discover → Add index source</strong> in DSH and paste the URL above.</p>
   </section>
@@ -54,9 +54,9 @@
 
   <section>
     <h2>本仓库 / This repo</h2>
-    <p>索引由 <code>data/plugins.json</code> + <code>data/market.json</code> 生成，
-       GitHub Actions 每次推送自动构建、校验并发布到 Pages。</p>
-    <p>收录新插件：<code>node scripts/add.mjs &lt;npm 包名&gt;</code>，把输出粘进清单，提交即可。</p>
+    <p>索引由 <code>data/plugins.json</code> + <code>data/market.json</code> 生成：
+       <code>node scripts/build.mjs</code>，提交后由 Pages 发布。</p>
+    <p>校验：<code>node scripts/verify.mjs</code>。</p>
   </section>
 </main>
 </body>
