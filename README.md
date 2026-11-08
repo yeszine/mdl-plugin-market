@@ -224,6 +224,16 @@ https://<owner>.github.io/mdl-plugin-market/index.json
 
 > 历史阻塞记录：仓库最初为 private，Pages API 返回 `422 Your current plan does not support GitHub Pages for this repository.`。改为 public 后，通过 `POST /repos/yeszine/mdl-plugin-market/pages`（`source.branch=main`、`source.path=/`）创建成功；首次构建 `building → built`。
 
+#### 本机推送备用通道（443）
+
+若本机 `github.com:22` 连接超时，改用 GitHub 的 443 SSH 通道推送，无需修改 remote：
+
+```powershell
+$env:GIT_SSH_COMMAND="ssh -p 443 -o HostName=ssh.github.com"
+git push origin main
+Remove-Item Env:GIT_SSH_COMMAND
+```
+
 #### 如需重新启用或排查 Pages
 
 1. 打开 `https://github.com/yeszine/mdl-plugin-market/settings/pages`。
